@@ -9,14 +9,22 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 import { Header } from './header';
-import './layout.css';
+import './layout.scss';
 
 type LayoutProps = {
   children: JSX.Element[];
 };
 
+interface SiteDataProps {
+  site: {
+    siteMetadata: {
+      title: string;
+    };
+  };
+}
+
 export const Layout = ({ children }: LayoutProps) => {
-  const data = useStaticQuery(graphql`
+  const data = useStaticQuery<SiteDataProps>(graphql`
     query SiteTitleQuery {
       site {
         siteMetadata {

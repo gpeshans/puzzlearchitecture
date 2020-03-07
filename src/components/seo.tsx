@@ -16,7 +16,7 @@ interface SEOProps {
   meta?: JSX.IntrinsicElements['meta'][];
 }
 
-interface SiteProps {
+interface SiteDataProps {
   site: {
     siteMetadata: {
       title: string;
@@ -27,7 +27,7 @@ interface SiteProps {
 }
 
 export function SEO({ title, description, lang = 'en', meta = [] }: SEOProps) {
-  const { site } = useStaticQuery<SiteProps>(
+  const { site } = useStaticQuery<SiteDataProps>(
     graphql`
       query {
         site {
