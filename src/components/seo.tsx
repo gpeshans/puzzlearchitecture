@@ -13,11 +13,21 @@ interface SEOProps {
   title: string;
   description?: string;
   lang?: string;
-  meta?: any[];
+  meta?: JSX.IntrinsicElements['meta'][];
+}
+
+interface SiteProps {
+  site: {
+    siteMetadata: {
+      title: string;
+      description: string;
+      author: string;
+    };
+  };
 }
 
 export function SEO({ title, description, lang = 'en', meta = [] }: SEOProps) {
-  const { site } = useStaticQuery(
+  const { site } = useStaticQuery<SiteProps>(
     graphql`
       query {
         site {
@@ -73,7 +83,7 @@ export function SEO({ title, description, lang = 'en', meta = [] }: SEOProps) {
           name: `twitter:description`,
           content: metaDescription,
         },
-      ].concat(meta)}
+      ].concat(meta as any)}
     />
   );
 }
