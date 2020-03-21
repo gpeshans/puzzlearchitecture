@@ -4,3 +4,8 @@ node_modules
 public
 # don't lint cached files
 .cache
+# don't lint configuration files
+gatsby-browser.js
+gatsby-config.js
+gatsby-node.js
+gatsby-ssr.js

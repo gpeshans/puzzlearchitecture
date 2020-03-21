@@ -26,7 +26,7 @@ interface SiteDataProps {
   };
 }
 
-export function SEO({ title, description, lang = 'en', meta = [] }: SEOProps) {
+export const SEO = ({ title, description, lang = 'en', meta = [] }: SEOProps) => {
   const { site } = useStaticQuery<SiteDataProps>(
     graphql`
       query {
@@ -86,4 +86,4 @@ export function SEO({ title, description, lang = 'en', meta = [] }: SEOProps) {
       ].concat(meta as any)}
     />
   );
-}
+};

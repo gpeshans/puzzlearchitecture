@@ -8,6 +8,9 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
   ],
+  env: {
+    browser: true,
+  },
   parserOptions: {
     project: './tsconfig.json',
   },

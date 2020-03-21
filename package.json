@@ -13,7 +13,8 @@
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-typescript": "^2.2.2",
-    "gatsby-source-filesystem": "^2.1.46",
+    "gatsby-source-filesystem": "^2.1.50",
+    "gatsby-transformer-remark": "^2.6.55",
     "gatsby-transformer-sharp": "^2.3.13",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",
@@ -46,7 +47,8 @@
     "prettier": "prettier --check '**/*.{ts,tsx,md,json,css,scss}'",
     "prettier:fix": "prettier --write '**/*.{ts,tsx,md,json,css,scss}'",
     "tsc": "tsc",
-    "lint": "eslint --ext .ts,.tsx src/"
+    "lint": "eslint --ext .ts,.tsx src/",
+    "lint:fix": "yarn lint --fix"
   },
   "repository": {
     "type": "git",

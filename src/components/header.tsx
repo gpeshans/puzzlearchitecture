@@ -1,9 +1,9 @@
 import { Link } from 'gatsby';
 import * as React from 'react';
 
-type HeaderProps = {
+interface HeaderProps {
   siteTitle?: string;
-};
+}
 
 export const Header = ({ siteTitle = '' }: HeaderProps) => (
   <header

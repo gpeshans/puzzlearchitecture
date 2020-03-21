@@ -11,9 +11,9 @@ import { useStaticQuery, graphql } from 'gatsby';
 import { Header } from './header';
 import './layout.scss';
 
-type LayoutProps = {
+interface LayoutProps {
   children: JSX.Element[];
-};
+}
 
 interface SiteDataProps {
   site: {
