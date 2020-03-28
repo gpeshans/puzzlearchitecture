@@ -1,5 +1,65 @@
+// grid width per modifier
+$grid__bp-sm: 576;
 $grid__bp-md: 768;
+$grid__bp-lg: 992;
+$grid__bp-xl: 1200;
+
+// number of columns
 $grid__cols: 12;
+
+// map of modifier and breakpoint (width)
+$map-grid-props: (
+  '': 0,
+  '-sm': $grid__bp-sm,
+  '-md': $grid__bp-md,
+  '-lg': $grid__bp-lg,
+  '-xl': $grid__bp-xl,
+);
+
+@mixin create-mq($breakpoint, $min-or-max) {
+  @if ($breakpoint == 0) {
+    @content;
+  } @else {
+    @media screen and (#{$min-or-max}-width: $breakpoint *1px) {
+      @content;
+    }
+  }
+}
+
+@mixin create-col-classes($modifier, $grid-cols, $breakpoint) {
+  @include create-mq($breakpoint, 'min') {
+    @if ($modifier == '') {
+      $modifier: '-sm';
+    }
+    &__col#{$modifier}-offset-0 {
+      margin-left: 0;
+    }
+    @for $i from 1 through $grid-cols {
+      &__col#{$modifier}-#{$i} {
+        flex-basis: (100 / ($grid-cols / $i)) * 1%;
+      }
+      &__col#{$modifier}-offset-#{$i} {
+        margin-left: (100 / ($grid-cols / $i)) * 1%;
+      }
+    }
+  }
+}
+
+@each $modifier, $breakpoint in $map-grid-props {
+  @if ($modifier == '') {
+    $modifier: '-xs';
+  }
+  @include create-mq($breakpoint - 1, 'max') {
+    .hidden#{$modifier}-down {
+      display: none !important;
+    }
+  }
+  @include create-mq($breakpoint, 'min') {
+    .hidden#{$modifier}-up {
+      display: none !important;
+    }
+  }
+}
 
 .container {
   max-width: $grid__bp-md * 1px;
@@ -16,43 +76,25 @@ $grid__cols: 12;
     width: 100%;
   }
 
-  @for $i from 1 through $grid__cols {
-    $col_width: (100 / ($grid__cols / $i)) * 1%;
-    &__col-sm-#{$i} {
-      flex-basis: $col_width;
-    }
-    // &__col-sm-offset-#{$i} {
-    //   margin-left: $col_width;
-    // }
+  @each $modifier, $breakpoint in $map-grid-props {
+    @include create-col-classes($modifier, $grid__cols, $breakpoint);
   }
 }
 
-@media screen and (min-width: $grid__bp-md * 1px) {
-  @for $i from 1 through $grid__cols {
-    $col_width: (100 / ($grid__cols / $i)) * 1%;
-    &__col-md-#{$i} {
-      flex-basis: $col_width;
-    }
-    // &__col-md-offset-#{$i} {
-    //   margin-left: $col_width;
-    // }
-  }
-}
-
-// delete this
+// delete when not needed
 .container {
-  background-color: #88d8b0;
+  background-color: darkgrey;
   padding: 10px;
   box-sizing: border-box;
   &__row {
-    background-color: #ffeead;
+    background-color: grey;
   }
   @at-root {
     [class*='container__col-'] {
       width: 150px;
       height: 30px;
-      background-color: #ff6f69;
-      outline: 1px solid #ffcc5c;
+      background-color: lightgrey;
+      outline: 1px solid whitesmoke;
       display: flex;
       align-items: center;
       justify-content: space-around;
