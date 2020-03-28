@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+}
+
+footer {
+  flex-shrink: 0;
+}

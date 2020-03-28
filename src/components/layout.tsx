@@ -32,7 +32,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Footer></Footer>
+      <Footer />
     </>
   );
 };

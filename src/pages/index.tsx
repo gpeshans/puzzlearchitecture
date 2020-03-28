@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
+import { Container, ContainerFluid, Row, Column } from '../components/grid';
 
 import { Layout } from '../components/layout';
 import { SEO } from '../components/seo';
@@ -7,10 +8,38 @@ import { SEO } from '../components/seo';
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <h1>Hi from the home page</h1>
-    <p>Welcome to the home page</p>
-    <Link to="/content/1/">Go to content item 1</Link>
-    <br />
+    <Container>
+      <Row>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+      </Row>
+    </Container>
+    {/* <ContainerFluid>
+      <Row>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+        <Column span={12} spanMd={3}>
+          .column
+        </Column>
+      </Row>
+    </ContainerFluid> */}
   </Layout>
 );
 
