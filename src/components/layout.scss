@@ -1,3 +1,14 @@
+@import '../assets/variables.scss';
+
+body {
+  font: normal $font-size-base $font-family-base;
+  color: $cl-grey-90;
+  line-height: 1.15;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 main {
   display: flex;
   min-height: 100%;
