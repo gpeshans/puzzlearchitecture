@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ContainerFluid, Column, Row } from './grid';
+import { ContainerFluid, Column, Row } from '../grid';
 
 interface FooterProps {
   siteTitle?: string;

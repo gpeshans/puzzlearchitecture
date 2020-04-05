@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Row, Column, ContainerFluid } from './grid';
+import { Row, Column, ContainerFluid } from '../grid';
 
 interface HeaderProps {
   siteTitle?: string;
