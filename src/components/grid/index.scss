@@ -83,21 +83,49 @@ $map-grid-props: (
 
 // delete when not needed
 .container {
-  background-color: darkgrey;
   padding: 10px;
   box-sizing: border-box;
-  &__row {
-    background-color: grey;
-  }
   @at-root {
     [class*='container__col-'] {
-      width: 150px;
-      height: 30px;
-      background-color: lightgrey;
-      outline: 1px solid whitesmoke;
       display: flex;
       align-items: center;
       justify-content: space-around;
     }
+  }
+
+  .imagePlaceholder {
+    height: 300px !important;
+    max-width: 350px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 30px;
+  }
+
+  .logo {
+    margin: 10px !important;
+    height: 100px;
+    width: 350px;
+    max-width: 350px !important;
+    display: flex;
+    align-items: center;
+    font-size: 60px;
+    font-weight: lighter;
+  }
+
+  .burger {
+    margin: 10px;
+    height: 100px;
+    width: 350px;
+    max-width: 350px !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 40px;
+    font-weight: lighter;
+  }
+
+  .footerInfo {
+    height: 30px;
   }
 }

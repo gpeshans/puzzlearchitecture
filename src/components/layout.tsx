@@ -6,7 +6,7 @@ import { Footer } from './footer';
 import './layout.scss';
 
 interface LayoutProps {
-  children: JSX.Element[];
+  children: React.ReactNode;
 }
 
 interface SiteDataProps {
@@ -32,7 +32,7 @@ export const Layout = ({ children }: LayoutProps) => {
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
-      <Footer />
+      <Footer siteTitle={data.site.siteMetadata.title} />
     </>
   );
 };

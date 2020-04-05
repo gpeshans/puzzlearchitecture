@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `puzzlearchitecture`,
-    description: `Website for puzzlearchitecture.`,
+    title: `puzzle`,
+    description: `puzzle`,
     author: `@gpeshans`,
   },
   plugins: [
@@ -42,8 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `puzzlearchitecture`,
-        short_name: `puzzarch`,
+        name: `puzzle`,
+        short_name: `puzz`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,

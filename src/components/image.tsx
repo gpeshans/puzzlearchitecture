@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import Img, { FixedObject } from 'gatsby-image';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -14,25 +14,49 @@ import Img, { FluidObject } from 'gatsby-image';
  */
 
 interface ImgData {
-  placeholderImage: {
-    childImageSharp: {
-      fluid: FluidObject;
-    };
+  images: {
+    edges: {
+      node: {
+        relativePath: string;
+        name: string;
+        childImageSharp: {
+          fixed: FixedObject;
+        };
+      };
+    }[];
   };
 }
 
-export const Image = () => {
+interface ImgProps {
+  filename: string;
+}
+
+export const Image = ({ filename }: ImgProps) => {
   const data = useStaticQuery<ImgData>(graphql`
     query {
-      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid
+      images: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fixed(width: 350, height: 300) {
+                ...GatsbyImageSharpFixed
+              }
+            }
           }
         }
       }
     }
   `);
 
-  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />;
+  const image = data.images.edges.find(n => {
+    return n.node.relativePath.includes(filename);
+  });
+
+  if (!image) {
+    return null;
+  }
+
+  return <Img fixed={image.node.childImageSharp.fixed} durationFadeIn={500} fadeIn={true} />;
 };
