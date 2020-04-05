@@ -1,6 +1,7 @@
 import * as React from 'react';
 
 import { ContainerFluid, Column, Row } from '../grid';
+import './index.scss';
 
 interface FooterProps {
   siteTitle?: string;
@@ -9,9 +10,9 @@ interface FooterProps {
 export const Footer = ({ siteTitle = '' }: FooterProps) => (
   <footer>
     <ContainerFluid>
-      <Row>
-        <Column className="footerInfo" spanXl={4} offsetXl={4}>
-          © {new Date().getFullYear()} <a href="https://www.instagram.com/puzzle.architecture/">{siteTitle}</a>
+      <Row className="pz-FooterRow">
+        <Column className="pz-FooterRow__info">
+          © {new Date().getFullYear()} {siteTitle}
         </Column>
       </Row>
     </ContainerFluid>

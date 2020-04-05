@@ -1,5 +1,8 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
+
 import { Row, Column, ContainerFluid } from '../grid';
+import './index.scss';
 
 interface HeaderProps {
   siteTitle?: string;
@@ -8,12 +11,12 @@ interface HeaderProps {
 export const Header = ({ siteTitle = '' }: HeaderProps) => (
   <header>
     <ContainerFluid>
-      <Row>
-        <Column spanXl={3}>
-          <div className="logo">{siteTitle}</div>
+      <Row className="pz-HeaderRow">
+        <Column className="pz-HeaderRow__logo" spanXl={2}>
+          <Link to="/">{siteTitle}</Link>
         </Column>
-        <Column spanXl={3} offsetXl={6}>
-          <div className="burger">info/about</div>
+        <Column spanXl={2}>
+          <Link to="/about">info/about</Link>
         </Column>
       </Row>
     </ContainerFluid>

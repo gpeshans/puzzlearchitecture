@@ -2,11 +2,21 @@
 
 body {
   font: normal $font-size-base $font-family-base;
-  color: $cl-grey-90;
+  color: $cl-grey-primary;
   line-height: 1.15;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  text-decoration: none;
+  color: $cl-primary;
+
+  &:hover {
+    cursor: pointer;
+    color: $cl-primary-light;
+  }
 }
 
 main {

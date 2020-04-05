@@ -1,0 +1,12 @@
+.pz-FooterRow {
+  height: 30px;
+  align-items: center;
+
+  font-size: 20px;
+  font-weight: lighter;
+
+  &__info {
+    display: flex;
+    justify-content: center;
+  }
+}

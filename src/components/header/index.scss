@@ -1,0 +1,15 @@
+.pz-HeaderRow {
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 60px;
+  font-weight: lighter;
+
+  &__logo {
+    align-self: flex-start;
+  }
+
+  &__about {
+    align-self: flex-end;
+  }
+}

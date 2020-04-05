@@ -3,6 +3,7 @@ import * as React from 'react';
 import { ContainerFluid, Row, Column } from '../components/grid';
 import { Layout } from '../components/layout';
 import { Image } from '../components/image';
+import './index.scss';
 
 const IndexPage = () => (
   <Layout>
