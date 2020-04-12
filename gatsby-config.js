@@ -42,7 +42,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `puzzle`,
+        name: `puzzle.architecture`,
         short_name: `puzz`,
         start_url: `/`,
         background_color: `#663399`,

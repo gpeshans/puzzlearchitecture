@@ -1,11 +1,10 @@
 .pz-HeaderRow {
-  align-items: center;
+  align-items: flex-end;
 
   font-size: 25px;
   font-weight: lighter;
 
   &__logo {
-    font-size: 40px;
     display: flex;
     justify-content: flex-start;
   }
