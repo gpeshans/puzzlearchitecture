@@ -1,15 +1,26 @@
 .pz-HeaderRow {
-  justify-content: space-between;
   align-items: center;
 
-  font-size: 60px;
+  font-size: 25px;
   font-weight: lighter;
 
   &__logo {
-    align-self: flex-start;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__nav-item {
+    margin-right: 1.5vw;
   }
 
   &__about {
-    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
   }
 }

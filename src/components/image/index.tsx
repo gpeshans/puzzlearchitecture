@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img, { FixedObject } from 'gatsby-image';
+import Img, { FluidObject } from 'gatsby-image';
+import './index.scss';
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -20,7 +21,7 @@ interface ImgData {
         relativePath: string;
         name: string;
         childImageSharp: {
-          fixed: FixedObject;
+          fluid: FluidObject;
         };
       };
     }[];
@@ -40,8 +41,9 @@ export const Image = ({ filename }: ImgProps) => {
             relativePath
             name
             childImageSharp {
-              fixed(width: 350, height: 300) {
-                ...GatsbyImageSharpFixed
+              fluid(maxWidth: 1600, maxHeight: 1600, quality: 100) {
+                ...GatsbyImageSharpFluid_withWebp
+                presentationWidth
               }
             }
           }
@@ -58,5 +60,5 @@ export const Image = ({ filename }: ImgProps) => {
     return null;
   }
 
-  return <Img fixed={image.node.childImageSharp.fixed} durationFadeIn={500} fadeIn={true} />;
+  return <Img className="pz-Img" fluid={image.node.childImageSharp.fluid} durationFadeIn={500} fadeIn={true} />;
 };

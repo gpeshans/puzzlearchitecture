@@ -1,9 +1,12 @@
 @import '../../styles';
 
 body {
+  padding-left: 3vw;
+  padding-right: 3vw;
+
   font: normal $font-size-base $font-family-base;
-  color: $cl-grey-primary;
-  line-height: 1.15;
+  color: $cl-primary;
+  line-height: normal;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

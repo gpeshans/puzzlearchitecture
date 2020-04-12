@@ -15,7 +15,19 @@ export const Header = ({ siteTitle = '' }: HeaderProps) => (
         <Column className="pz-HeaderRow__logo" spanXl={2}>
           <Link to="/">{siteTitle}</Link>
         </Column>
-        <Column spanXl={2}>
+        <Column className="pz-HeaderRow__nav" spanXl={8}>
+          {/* TODO: GP - make component */}
+          <div className="pz-HeaderRow__nav-item">
+            <Link to="/">planning</Link>
+          </div>
+          <div className="pz-HeaderRow__nav-item">
+            <Link to="/">interiors</Link>
+          </div>
+          <div className="pz-HeaderRow__nav-item">
+            <Link to="/">competitions</Link>
+          </div>
+        </Column>
+        <Column className="pz-HeaderRow__about" spanXl={2}>
           <Link to="/about">info/about</Link>
         </Column>
       </Row>
