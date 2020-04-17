@@ -1,0 +1,48 @@
+@import '../../styles/variables.scss';
+
+.pz-ProjectItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+  padding: 10px;
+
+  a {
+    cursor: pointer;
+  }
+
+  &__image-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: $cl-white;
+  }
+
+  &__image-overlay-text {
+    color: $cl-primary;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  &:hover &__image-overlay {
+    opacity: 0.5;
+  }
+
+  &__info {
+    padding: 10px;
+    text-align: center;
+  }
+}

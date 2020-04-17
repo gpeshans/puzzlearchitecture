@@ -3,56 +3,37 @@ import * as React from 'react';
 import { ContainerFluid, Row, Column } from '../components/grid';
 import { SEO } from '../components/seo';
 import { Layout } from '../components/layout';
-import { Image } from '../components/image';
+import { ProjectItem } from '../components/project-item';
 import './index.scss';
+
+const renderSamples = () => {
+  const rows: JSX.Element[] = [];
+  let cols: JSX.Element[] = [];
+  for (let i = 0; i < 12; i++) {
+    const col = (
+      <Column key={i} spanXl={3}>
+        <ProjectItem
+          name={`Villa Berovo ${i + 1}`}
+          location={`Berovo lake ${i + 1}`}
+          year={new Date()}
+          imageFilename={`sample${i + 1}.jpg`}
+        />
+      </Column>
+    );
+    cols.push(col);
+    if ((i + 1) % 4 === 0) {
+      const row = <Row key={(i + 1) / 3}>{cols.map(c => c)} </Row>;
+      rows.push(row);
+      cols = [];
+    }
+  }
+  return rows;
+};
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Puzzle" />
-    <ContainerFluid>
-      <Row>
-        <Column spanXl={3}>
-          <Image filename="sample1.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample2.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample3.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample4.jpg" />
-        </Column>
-      </Row>
-      <Row>
-        <Column spanXl={3}>
-          <Image filename="sample5.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample6.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample7.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample8.jpg" />
-        </Column>
-      </Row>
-      <Row>
-        <Column spanXl={3}>
-          <Image filename="sample9.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample10.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample11.jpg" />
-        </Column>
-        <Column spanXl={3}>
-          <Image filename="sample12.jpg" />
-        </Column>
-      </Row>
-    </ContainerFluid>
+    <ContainerFluid>{renderSamples()}</ContainerFluid>
   </Layout>
 );
 

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import classNames from 'classnames';
 import { useStaticQuery, graphql } from 'gatsby';
 import Img, { FluidObject } from 'gatsby-image';
 import './index.scss';
@@ -30,9 +31,10 @@ interface ImgData {
 
 interface ImgProps {
   filename: string;
+  className?: string;
 }
 
-export const Image = ({ filename }: ImgProps) => {
+export const Image = ({ filename, className = '' }: ImgProps) => {
   const data = useStaticQuery<ImgData>(graphql`
     query {
       images: allFile {
@@ -60,5 +62,7 @@ export const Image = ({ filename }: ImgProps) => {
     return null;
   }
 
-  return <Img className="pz-Img" fluid={image.node.childImageSharp.fluid} durationFadeIn={500} fadeIn={true} />;
+  const classes = classNames('pz-Img', className);
+
+  return <Img className={classes} fluid={image.node.childImageSharp.fluid} durationFadeIn={500} fadeIn={true} />;
 };
