@@ -11,13 +11,13 @@ export const Footer = ({ siteTitle = '' }: FooterProps) => (
   <footer>
     <ContainerFluid>
       <Row className="pz-FooterRow">
-        <Column className="pz-FooterRow__info" spanXl={1}>
-          <div>
+        <Column className="pz-FooterRow__info" spanXl={6}>
+          <span>
             © {new Date().getFullYear()} {siteTitle}
-          </div>
+          </span>
           <div>Skopje, North Macedonia</div>
         </Column>
-        <Column className="pz-FooterRow__social-media" spanXl={1}>
+        <Column className="pz-FooterRow__social-media" spanXl={6}>
           <div>
             <a href="https://www.instagram.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
               instagram

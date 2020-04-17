@@ -26,6 +26,9 @@ export const Header = ({ siteTitle = '' }: HeaderProps) => (
           <div className="pz-HeaderRow__nav-item">
             <Link to="/">competitions</Link>
           </div>
+          <div className="pz-HeaderRow__nav-item">
+            <Link to="/">#puzzle</Link>
+          </div>
         </Column>
         <Column className="pz-HeaderRow__about" spanXl={2}>
           <Link to="/about">info/about</Link>
