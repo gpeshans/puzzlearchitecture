@@ -1,16 +1,14 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
 
-import { Layout } from '../../components/layout';
-import { SEO } from '../../components/seo';
+import { Page } from '../../components/page';
 
 const About = () => (
-  <Layout>
-    <SEO title="About" />
+  <Page title="About">
     <h1>Hi from the about page</h1>
     <p>Welcome to the about page</p>
     <Link to="/">Go back to the homepage</Link>
-  </Layout>
+  </Page>
 );
 
 export default About;

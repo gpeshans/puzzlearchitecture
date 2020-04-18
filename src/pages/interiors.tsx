@@ -5,13 +5,9 @@ import { ProjectItem } from '../components/project-item';
 import { Page } from '../components/page';
 import { projectRepository, Category } from '../data';
 
-/**
- * TODO: GP - dummy data. Get rid of this code.
- */
-// START
 const renderSamples = () => {
   const cols: JSX.Element[] = [];
-  const allProjects = projectRepository.getAllProjects();
+  const allProjects = projectRepository.getProjectsForCategory(Category.Interiors);
   allProjects.forEach((project, index) => {
     const col = (
       <Column key={index} spanXl={3} spanLg={4} spanMd={6} spanSm={12}>
@@ -29,27 +25,6 @@ const renderSamples = () => {
   return [row];
 };
 
-const dummyCategories: Map<number, Category> = new Map([
-  [1, Category.Planning],
-  [2, Category.Interiors],
-  [3, Category.Competitions],
-]);
+const Interiors = () => <Page title="Interiors">{renderSamples()}</Page>;
 
-for (let i = 0; i < 12; i++) {
-  projectRepository.registerProject({
-    id: `vila-berovo${i + 1}`,
-    category: dummyCategories.get((i % 3) + 1)!,
-    dateAdded: new Date(),
-    dateDesigned: new Date(),
-    name: `Vila berovo ${i + 1}`,
-    location: 'Berovo',
-    titleImage: `sample${i + 1}.jpg`,
-    images: [],
-    description: 'Some description',
-  });
-}
-// END
-
-const IndexPage = () => <Page title="Puzzle">{renderSamples()}</Page>;
-
-export default IndexPage;
+export default Interiors;

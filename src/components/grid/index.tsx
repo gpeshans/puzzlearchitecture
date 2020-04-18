@@ -25,7 +25,7 @@ interface ColumnProps {
    * A space-delimited list of class names to pass along to a child element.
    */
   className?: string;
-  span?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  spanSm?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   spanMd?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   spanLg?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
   spanXl?: 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
@@ -74,7 +74,7 @@ export const Row = ({ children, className }: RowProps) => {
 export const Column = ({
   children,
   className,
-  span = 12,
+  spanSm = 12,
   spanMd = 12,
   spanLg = 12,
   spanXl = 12,
@@ -93,7 +93,7 @@ export const Column = ({
   hiddenXlDown = false,
 }: ColumnProps) => {
   const classes = classNames(
-    `container__col-sm-${span}`,
+    `container__col-sm-${spanSm}`,
     `container__col-md-${spanMd}`,
     `container__col-lg-${spanLg}`,
     `container__col-xl-${spanXl}`,

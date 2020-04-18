@@ -35,6 +35,8 @@ module.exports = {
         path: `${__dirname}/src/styles`,
       },
     },
+    // TODO: GP - revisit!
+    `gatsby-plugin-mdx`,
     `gatsby-transformer-remark`,
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
