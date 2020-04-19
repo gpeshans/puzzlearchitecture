@@ -14,10 +14,10 @@ export const Header = ({ siteTitle = '' }: HeaderProps) => (
   <header>
     <ContainerFluid>
       <Row className="pz-HeaderRow">
-        <Column className="pz-HeaderRow__logo" spanXl={2}>
+        <Column className="pz-HeaderRow__logo" spanXl={2} spanLg={2} spanMd={6} spanSm={6}>
           <Link to="/">{siteTitle}</Link>
         </Column>
-        <Column className="pz-HeaderRow__nav" spanXl={8}>
+        <Column className="pz-HeaderRow__nav" spanXl={8} spanLg={7} hiddenLgDown={true}>
           {/* TODO: GP - make component */}
           <div className="pz-HeaderRow__nav-item">
             <Link to="/planning">planning</Link>
@@ -32,7 +32,7 @@ export const Header = ({ siteTitle = '' }: HeaderProps) => (
             <Link to="/">#puzzle</Link>
           </div>
         </Column>
-        <Column className="pz-HeaderRow__about" spanXl={2}>
+        <Column className="pz-HeaderRow__about" spanXl={2} spanLg={3} hiddenLgDown={true}>
           <Link to="/about">about</Link>
           <a href="https://www.instagram.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faInstagram} size="sm"></FontAwesomeIcon>
