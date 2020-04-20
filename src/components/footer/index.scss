@@ -1,22 +1,42 @@
 @import '../../styles/variables.scss';
 
 .pz-FooterRow {
-  min-height: 5vh;
-  align-items: flex-start;
-  justify-content: space-between;
-
   font-size: 20px;
   font-weight: lighter;
+  align-content: flex-start;
 
   &__info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    order: 2;
   }
 
   &__social-media {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    margin-bottom: 20px;
+    order: 1;
+  }
+
+  &__social-media-title--semi-bold {
+    font-weight: normal;
+  }
+}
+
+// Larger than md navbar
+@media all and (min-width: $screen__bp-md *1px) {
+  .pz-FooterRow {
+    &__info {
+      align-items: flex-start;
+      order: 1;
+    }
+
+    &__social-media {
+      align-items: flex-end;
+      order: 2;
+    }
   }
 }

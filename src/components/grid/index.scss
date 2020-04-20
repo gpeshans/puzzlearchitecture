@@ -1,9 +1,11 @@
+@import '../../styles/variables.scss';
+
 // Grid
 // grid width per modifier
-$grid__bp-sm: 360;
-$grid__bp-md: 600;
-$grid__bp-lg: 992;
-$grid__bp-xl: 1200;
+$grid__bp-sm: $screen__bp-sm;
+$grid__bp-md: $screen__bp-md;
+$grid__bp-lg: $screen__bp-lg;
+$grid__bp-xl: $screen__bp-xl;
 
 // number of columns
 $grid__cols: 12;
@@ -65,7 +67,7 @@ $map-grid-props: (
 .container {
   max-width: $grid__bp-md * 1px;
   margin: 0 auto;
-  padding: 3vh;
+  padding: 1vh;
 
   &--fluid {
     margin: 0;
@@ -75,7 +77,6 @@ $map-grid-props: (
   &__row {
     display: flex;
     flex-wrap: wrap;
-    padding: 2vh;
 
     &__row {
       margin-left: 0;

@@ -1,6 +1,8 @@
 import * as React from 'react';
 
 import { ContainerFluid, Column, Row } from '../grid';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import './index.scss';
 
 interface FooterProps {
@@ -11,23 +13,20 @@ export const Footer = ({ siteTitle = '' }: FooterProps) => (
   <footer>
     <ContainerFluid>
       <Row className="pz-FooterRow">
-        <Column className="pz-FooterRow__info" spanXl={6}>
+        <Column className="pz-FooterRow__info" spanMd={6} spanLg={6} spanXl={6}>
           <span>
             © {new Date().getFullYear()} {siteTitle}
           </span>
           <div>Skopje, North Macedonia</div>
         </Column>
-        <Column className="pz-FooterRow__social-media" spanXl={6}>
-          <div>
-            <a href="https://www.instagram.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
-              instagram
-            </a>
-          </div>
-          <div>
-            <a href="https://www.facebook.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
-              facebook
-            </a>
-          </div>
+        <Column className="pz-FooterRow__social-media" spanMd={6} spanLg={6} spanXl={6}>
+          <span className="pz-FooterRow__social-media-title--semi-bold">Follow</span>
+          <a href="https://www.instagram.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} /> instagram
+          </a>
+          <a href="https://www.facebook.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebookF} /> facebook
+          </a>
         </Column>
       </Row>
     </ContainerFluid>

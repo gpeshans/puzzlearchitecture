@@ -5,8 +5,8 @@
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 2vh;
-  padding: 2vh;
+  margin-bottom: 1vh;
+  padding: 1vh;
 
   a {
     cursor: pointer;
@@ -43,7 +43,7 @@
   }
 
   &__info {
-    padding: 2vh;
+    padding: 1vh;
     text-align: center;
   }
 }
