@@ -10,5 +10,7 @@ deploy:
   github-token: $GITHUB_TOKEN
   script: yarn install && yarn run deploy
   skip_cleanup: true
+  local_dir: public
+  keep-history: true
   on:
     branch: master

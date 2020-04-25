@@ -7,7 +7,7 @@ const About = () => (
   <Page title="About">
     <h1>Hi from the about page</h1>
     <p>Welcome to the about page</p>
-    <Link to="/">Go back to the homepage</Link>
+    <Link to="/">Go back</Link>
   </Page>
 );
 
