@@ -61,7 +61,7 @@
     "tsc": "tsc",
     "lint": "eslint --ext .ts,.tsx src/",
     "lint:fix": "yarn lint --fix",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r https://$GH_TOKEN@github.com/gpeshans/puzzlearchitecture.git"
   },
   "repository": {
     "type": "git",
