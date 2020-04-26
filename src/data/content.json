@@ -3,7 +3,7 @@
     "name": "Square Berovo",
     "category": "planning",
     "location": "Berovo",
-    "year": 2015,
+    "year": 2020,
     "titleImage": "sample1.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 1000,
@@ -13,7 +13,7 @@
     "name": "Square Pehchevo",
     "category": "planning",
     "location": "Pehchevo",
-    "year": 2016,
+    "year": 2020,
     "titleImage": "sample2.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 2000,
@@ -24,7 +24,7 @@
     "category": "interiors",
     "location": "Sample three location",
     "year": 2017,
-    "titleImage": "sample1.jpg",
+    "titleImage": "sample3.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 3000
   },
@@ -33,7 +33,7 @@
     "category": "interiors",
     "location": "Sample four location",
     "year": 2018,
-    "titleImage": "sample2.jpg",
+    "titleImage": "sample4.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 4000
   },
@@ -42,7 +42,7 @@
     "category": "competitions",
     "location": "Sample five location",
     "year": 2019,
-    "titleImage": "sample1.jpg",
+    "titleImage": "sample5.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 5000
   },
@@ -51,7 +51,7 @@
     "category": "competitions",
     "location": "Sample six location",
     "year": 2020,
-    "titleImage": "sample2.jpg",
+    "titleImage": "sample6.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 6000
   },
@@ -60,7 +60,7 @@
     "category": "planning",
     "location": "Sample seven location",
     "year": 2015,
-    "titleImage": "sample1.jpg",
+    "titleImage": "sample7.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 1000
   },
@@ -69,7 +69,7 @@
     "category": "planning",
     "location": "Sample eight location",
     "year": 2016,
-    "titleImage": "sample2.jpg",
+    "titleImage": "sample8.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 2000
   },
@@ -78,7 +78,7 @@
     "category": "interiors",
     "location": "Sample nine location",
     "year": 2017,
-    "titleImage": "sample1.jpg",
+    "titleImage": "sample9.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 3000
   },
@@ -87,7 +87,7 @@
     "category": "interiors",
     "location": "Sample ten location",
     "year": 2018,
-    "titleImage": "sample2.jpg",
+    "titleImage": "sample10.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 4000
   },
@@ -96,7 +96,7 @@
     "category": "competitions",
     "location": "Sample eleven location",
     "year": 2019,
-    "titleImage": "sample1.jpg",
+    "titleImage": "sample11.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 5000
   },
@@ -105,7 +105,7 @@
     "category": "competitions",
     "location": "Sample twelve location",
     "year": 2020,
-    "titleImage": "sample2.jpg",
+    "titleImage": "sample12.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 6000
   },
@@ -114,7 +114,7 @@
     "category": "planning",
     "location": "Sample thirteen location",
     "year": 2019,
-    "titleImage": "sample1.jpg",
+    "titleImage": "sample13.jpg",
     "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 1000
   }
