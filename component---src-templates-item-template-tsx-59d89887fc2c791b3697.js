@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{JD95:function(e,t,n){"use strict";n.r(t),n.d(t,"pageQuery",(function(){return i}));n("f3/d");var a=n("q1tI"),r=n("/PkL"),i="2157693681";t.default=function(e){var t=e.data.allSitePage.edges[0].node.context;return a.createElement(r.a,{title:t.name},JSON.stringify(t))}}}]);
+//# sourceMappingURL=component---src-templates-item-template-tsx-59d89887fc2c791b3697.js.map
