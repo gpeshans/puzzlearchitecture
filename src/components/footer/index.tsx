@@ -1,8 +1,8 @@
 import * as React from 'react';
-
-import { ContainerFluid, Column, Row } from '../grid';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
+
+import { ContainerFluid, Column, Row } from '../grid';
 import './index.scss';
 
 interface FooterProps {

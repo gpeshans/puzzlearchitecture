@@ -1,6 +1,6 @@
 @import '../../styles/variables.scss';
 
-.pz-ProjectItem {
+.pz-ProjectTile {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -45,5 +45,6 @@
   &__info {
     padding: 1vh;
     text-align: center;
+    text-transform: uppercase;
   }
 }

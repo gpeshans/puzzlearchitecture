@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `puzzle`,
-    description: `puzzle`,
+    description: `puzzle.architecture`,
     author: `@gpeshans`,
   },
   plugins: [
@@ -12,13 +12,6 @@ module.exports = {
       options: {
         fonts: [`Source+Sans+Pro:300,400`],
         display: 'swap',
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/src/content`,
       },
     },
     {
@@ -35,9 +28,6 @@ module.exports = {
         path: `${__dirname}/src/styles`,
       },
     },
-    // TODO: GP - revisit!
-    `gatsby-plugin-mdx`,
-    `gatsby-transformer-remark`,
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -45,7 +35,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `puzzle.architecture`,
-        short_name: `puzz`,
+        short_name: `puzzle`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#663399`,
@@ -57,5 +47,6 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
+  // used by github pages for the deployment path prefix
   pathPrefix: '/puzzlearchitecture',
 };

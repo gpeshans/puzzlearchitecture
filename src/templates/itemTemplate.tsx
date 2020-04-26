@@ -1,41 +1,45 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
+import { ProjectItem } from '../data';
+import { Page } from '../components/page';
 
 interface TemplateProps {
   data: {
-    markdownRemark: {
-      frontmatter: {
-        title: string;
-        date: Date;
-      };
-      html: string;
+    allSitePage: {
+      edges: {
+        node: {
+          context: ProjectItem;
+        };
+      }[];
     };
   };
 }
 
 const Template = ({ data }: TemplateProps) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
-  return (
-    <>
-      <h1>{frontmatter.title}</h1>
-      <h2>{frontmatter.date}</h2>
-      <div dangerouslySetInnerHTML={{ __html: html }} />
-    </>
-  );
+  const project = data.allSitePage.edges[0].node.context;
+  // TODO: GP - implement item details component
+  return <Page title={project.name}>{JSON.stringify(project)}</Page>;
 };
-
-export default Template;
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
-      frontmatter {
-        date(formatString: "MMMM DD, YYYY")
-        path
-        title
+    allSitePage(filter: { path: { eq: $path } }) {
+      edges {
+        node {
+          context {
+            name
+            category
+            location
+            year
+            titleImage
+            images
+            surface
+            description
+          }
+        }
       }
     }
   }
 `;
+
+export default Template;

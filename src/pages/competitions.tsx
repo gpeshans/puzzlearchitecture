@@ -1,30 +1,42 @@
 import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { Row, Column } from '../components/grid';
-import { ProjectItem } from '../components/project-item';
 import { Page } from '../components/page';
-import { projectRepository, Category } from '../data';
+import { Row } from '../components/grid';
+import { ProjectsListQuery, renderProjectsDataList } from '../data';
 
-const renderSamples = () => {
-  const cols: JSX.Element[] = [];
-  const allProjects = projectRepository.getProjectsForCategory(Category.Competitions);
-  allProjects.forEach((project, index) => {
-    const col = (
-      <Column key={index} spanXl={3} spanLg={4} spanMd={6} spanSm={12}>
-        <ProjectItem
-          name={project.name}
-          location={project.location}
-          year={project.dateDesigned}
-          imageFilename={project.titleImage}
-        />
-      </Column>
-    );
-    cols.push(col);
-  });
-  const row = <Row key="row">{cols.map(c => c)} </Row>;
-  return [row];
+const Competitions = () => {
+  const data = useStaticQuery<ProjectsListQuery>(
+    graphql`
+      query {
+        allSitePage(
+          filter: { context: { name: { ne: null }, category: { eq: "competitions" } } }
+          sort: { fields: context___year, order: DESC }
+        ) {
+          edges {
+            node {
+              context {
+                category
+                description
+                images
+                location
+                name
+                surface
+                titleImage
+                year
+              }
+            }
+          }
+        }
+      }
+    `,
+  );
+
+  return (
+    <Page title="Competitions">
+      <Row>{renderProjectsDataList(data)}</Row>
+    </Page>
+  );
 };
-
-const Competitions = () => <Page title="Competitions">{renderSamples()}</Page>;
 
 export default Competitions;

@@ -1,9 +1,10 @@
 import * as React from 'react';
+import { Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+
 import { ContainerFluid, Column, Row } from '../grid';
 import { NavbarItem } from './item';
-import { Link } from 'gatsby';
 import './index.scss';
 
 interface NavbarProps {
