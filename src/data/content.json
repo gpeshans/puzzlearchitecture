@@ -5,7 +5,7 @@
     "location": "Berovo",
     "year": 2015,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 1000,
     "description": "This is a description for the project Square Berovo. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   },
@@ -15,9 +15,9 @@
     "location": "Pehchevo",
     "year": 2016,
     "titleImage": "sample2.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 2000,
-    "description": "This is a description for the project Square Pehchevo, more beautiful than the one in Berovo."
+    "description": "This is a description for the project Square Pehchevo, a lot more beautiful than the one in Berovo."
   },
   {
     "name": "Sample project name three",
@@ -25,7 +25,7 @@
     "location": "Sample three location",
     "year": 2017,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 3000
   },
   {
@@ -34,7 +34,7 @@
     "location": "Sample four location",
     "year": 2018,
     "titleImage": "sample2.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 4000
   },
   {
@@ -43,7 +43,7 @@
     "location": "Sample five location",
     "year": 2019,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 5000
   },
   {
@@ -52,7 +52,7 @@
     "location": "Sample six location",
     "year": 2020,
     "titleImage": "sample2.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 6000
   },
   {
@@ -61,7 +61,7 @@
     "location": "Sample seven location",
     "year": 2015,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 1000
   },
   {
@@ -70,7 +70,7 @@
     "location": "Sample eight location",
     "year": 2016,
     "titleImage": "sample2.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 2000
   },
   {
@@ -79,7 +79,7 @@
     "location": "Sample nine location",
     "year": 2017,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 3000
   },
   {
@@ -88,7 +88,7 @@
     "location": "Sample ten location",
     "year": 2018,
     "titleImage": "sample2.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 4000
   },
   {
@@ -97,7 +97,7 @@
     "location": "Sample eleven location",
     "year": 2019,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 5000
   },
   {
@@ -106,7 +106,7 @@
     "location": "Sample twelve location",
     "year": 2020,
     "titleImage": "sample2.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 6000
   },
   {
@@ -115,7 +115,7 @@
     "location": "Sample thirteen location",
     "year": 2019,
     "titleImage": "sample1.jpg",
-    "images": ["sample2.jpg", "sample3.jpg", "sample4.jpg", "sample5.jpg"],
+    "images": ["sample12.jpg", "sample3.jpg", "sample11.jpg", "sample5.jpg"],
     "surface": 1000
   }
 ]

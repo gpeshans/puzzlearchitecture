@@ -7,11 +7,12 @@ import { Layout } from '../layout';
 interface PageProps {
   children: React.ReactNode;
   title: string;
+  className?: string;
 }
 
-export const Page = ({ children, title }: PageProps) => (
+export const Page = ({ children, title, className = '' }: PageProps) => (
   <Layout>
     <SEO title={title} />
-    <ContainerFluid>{children}</ContainerFluid>
+    <ContainerFluid className={className}>{children}</ContainerFluid>
   </Layout>
 );

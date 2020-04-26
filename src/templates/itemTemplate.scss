@@ -1,0 +1,25 @@
+.pz-ItemTemplate {
+  &__Title {
+    font-size: 40px;
+    padding-bottom: 30px;
+  }
+
+  &__Field {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  &__Field__Label {
+    font-size: 15px;
+    font-weight: lighter;
+  }
+
+  &__Field__Value {
+    font-weight: normal;
+    padding-right: 20px;
+  }
+
+  &__Image {
+    padding-bottom: 20px;
+  }
+}

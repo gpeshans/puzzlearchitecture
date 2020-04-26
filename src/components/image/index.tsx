@@ -44,7 +44,7 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
             relativePath
             name
             childImageSharp {
-              fluid(maxWidth: 1600, maxHeight: 1600, quality: 100) {
+              fluid(maxWidth: 1800, maxHeight: 1800) {
                 ...GatsbyImageSharpFluid_withWebp
                 presentationWidth
               }
@@ -65,5 +65,13 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
 
   const classes = classNames('pz-Img', className);
 
-  return <Img className={classes} fluid={image.node.childImageSharp.fluid} durationFadeIn={500} fadeIn={true} />;
+  return (
+    <Img
+      alt={filename}
+      className={classes}
+      fluid={image.node.childImageSharp.fluid}
+      durationFadeIn={500}
+      fadeIn={true}
+    />
+  );
 };
