@@ -2,12 +2,9 @@ import * as React from 'react';
 
 import './index.scss';
 
-interface InputProps {
+interface InputProps extends React.HTMLProps<React.InputHTMLAttributes<HTMLInputElement>> {
   onChange: (event: any) => void;
   id: string;
-  required?: boolean;
-  placeholder?: string;
-  type?: 'text' | 'email';
 }
 
 export const Input = ({ onChange, id, type = 'text', required = false, placeholder = '' }: InputProps) => {

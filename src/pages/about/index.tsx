@@ -15,21 +15,23 @@ const About = () => {
 
   const onSubmit = (event: any) => {
     event.preventDefault();
-    alert(`name: ${name}, email: ${email}, message: ${message}`);
+
+    const emailAddress = 'puzzle.arch@outlook.com';
+    const subject = encodeURIComponent(`${name} (${email})`);
+    const body = encodeURIComponent(message);
+
+    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
   };
 
   const onNameChange = (event: any) => {
-    console.log(event.target.value);
     setName(event.target.value);
   };
 
   const onEmailChange = (event: any) => {
-    console.log(event.target.value);
     setEmail(event.target.value);
   };
 
   const onMessageChange = (event: any) => {
-    console.log(event.target.value);
     setMessage(event.target.value);
   };
 
@@ -59,15 +61,15 @@ const About = () => {
             <Row>
               <Column className="pzAbout__contact-form-row">
                 <label htmlFor="name">Name</label>
-                <Input id="name" onChange={onNameChange} required={true} />
+                <Input id="name" onChange={onNameChange} required={true} maxLength={120} />
               </Column>
               <Column className="pzAbout__contact-form-row">
                 <label htmlFor="email">Email</label>
-                <Input id="email" type="email" onChange={onEmailChange} required={true} />
+                <Input id="email" type="email" onChange={onEmailChange} required={true} maxLength={254} />
               </Column>
               <Column className="pzAbout__contact-form-row">
                 <label htmlFor="message">Message</label>
-                <Textarea id="message" onChange={onMessageChange} required={true} />
+                <Textarea id="message" onChange={onMessageChange} required={true} maxLength={256} />
               </Column>
               <Column className="pzAbout__contact-form-row pzAbout__contact-form-submit-button">
                 <Button text="Send" type="submit" />

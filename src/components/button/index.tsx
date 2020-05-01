@@ -1,11 +1,9 @@
 import * as React from 'react';
 import './index.scss';
 
-interface ButtonProps {
+interface ButtonProps
+  extends React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> {
   text: string;
-  onClick?: (event: any) => void;
-  autoFocus?: boolean;
-  type?: 'button' | 'submit';
 }
 
 export const Button = ({ text, onClick, autoFocus = false, type = 'button' }: ButtonProps) => {

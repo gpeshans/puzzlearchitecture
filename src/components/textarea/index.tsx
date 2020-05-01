@@ -2,11 +2,9 @@ import * as React from 'react';
 
 import './index.scss';
 
-interface TextAreaProps {
+interface TextAreaProps extends React.HTMLProps<React.TextareaHTMLAttributes<HTMLTextAreaElement>> {
   onChange: (event: any) => void;
   id: string;
-  required?: boolean;
-  placeholder?: string;
 }
 
 export const Textarea = ({ onChange, id, required = false, placeholder = '' }: TextAreaProps) => {
