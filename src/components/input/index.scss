@@ -1,0 +1,12 @@
+@import '../../styles/variables.scss';
+
+.pzInput {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 3px 0;
+  box-sizing: border-box;
+  border: 2px solid $cl-black;
+  outline: none;
+  margin-top: 5px;
+  font: inherit;
+}

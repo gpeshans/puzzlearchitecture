@@ -14,7 +14,7 @@ interface ProjectTileProps {
 
 export const ProjectTile = ({ name, location, year, titleImage }: ProjectTileProps) => (
   <div className="pz-ProjectTile">
-    <Link to={kebabCase(name)}>
+    <Link to={`/${kebabCase(name)}`}>
       <div className="pz-ProjectTile__image">
         <Image filename={titleImage} />
         <div className="pz-ProjectTile__image-overlay">

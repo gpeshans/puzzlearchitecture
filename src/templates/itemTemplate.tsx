@@ -46,14 +46,14 @@ const ItemTemplate = ({ data }: TemplateProps) => {
           ) : null}
         </Column>
         <Column spanSm={12} spanMd={8} spanLg={9} spanXl={9}>
-          <Row className="pz-ItemTemplate__Image">
-            <Column>
+          <Row>
+            <Column className="pz-ItemTemplate__Image">
               <Image filename={project.titleImage} />
             </Column>
           </Row>
           {project.images.map(image => (
-            <Row key={image} className="pz-ItemTemplate__Image">
-              <Column>
+            <Row key={image}>
+              <Column className="pz-ItemTemplate__Image">
                 <Image filename={image} />
               </Column>
             </Row>
