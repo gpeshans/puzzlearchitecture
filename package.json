@@ -35,6 +35,7 @@
     "gatsby-plugin-sass": "^2.1.30",
     "gatsby-plugin-sharp": "^2.4.3",
     "gatsby-plugin-typescript": "^2.2.2",
+    "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-source-filesystem": "^2.1.50",
     "gatsby-transformer-sharp": "^2.3.13",
     "gh-pages": "^2.2.0",

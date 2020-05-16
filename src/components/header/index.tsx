@@ -1,14 +1,10 @@
 import * as React from 'react';
 
-import { Navbar } from '../navbar';
+import { Navbar } from '../navigation';
 import './index.scss';
 
-interface HeaderProps {
-  siteTitle?: string;
-}
-
-export const Header = ({ siteTitle = '' }: HeaderProps) => (
-  <header>
-    <Navbar siteTitle={siteTitle} />
+export const Header = () => (
+  <header className="pz-Header">
+    <Navbar />
   </header>
 );
