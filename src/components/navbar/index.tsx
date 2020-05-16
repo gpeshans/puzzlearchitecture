@@ -35,7 +35,9 @@ export const Navbar = ({ siteTitle = '' }: NavbarProps) => {
               <NavbarItem to="/planning" text="planning" isActive={isMenuActive} />
               <NavbarItem to="/interiors" text="interiors" isActive={isMenuActive} />
               <NavbarItem to="/competitions" text="competitions" isActive={isMenuActive} />
-              <NavbarItem to="/" text="#puzzle" isActive={isMenuActive} />
+              {/* TODO: GP - uncomment when a solution for the instagram page is developed
+               <NavbarItem to="/instagram" text="#puzzle" isActive={isMenuActive} /> 
+               */}
               <NavbarItem to="/about" text="about/contact" isActive={isMenuActive} />
               <li className="pz-Navbar__toggle">{renderToggleIcon()}</li>
             </ul>
