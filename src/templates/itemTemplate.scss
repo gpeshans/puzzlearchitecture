@@ -1,29 +1,27 @@
 .pz-ItemTemplate {
   &__Title {
-    font-size: 50px;
-    padding-bottom: 20px;
-    padding-top: 40px;
+    font-size: 3.5em;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
     text-transform: uppercase;
   }
 
   &__Field {
-    font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 2vh;
   }
 
   &__Field__Label {
-    font-size: 15px;
+    font-size: 1em;
     font-weight: lighter;
   }
 
   &__Field__Value {
-    font-size: 20px;
-    padding-right: 30px;
-    font-weight: normal;
-    text-align: justify;
+    font-size: 1.5em;
+    font-weight: lighter;
+    padding-right: 3vh;
   }
 
   &__Image {
-    padding-bottom: 20px;
+    padding-bottom: 2.5vh;
   }
 }

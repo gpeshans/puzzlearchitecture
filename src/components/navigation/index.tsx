@@ -17,7 +17,7 @@ export const Navbar = () => {
 
   const renderToggleIcon = () => {
     const toggleMenuIcon = isMenuActive ? faTimes : faBars;
-    return <FontAwesomeIcon icon={toggleMenuIcon} size="2x" onClick={() => toggleMenu()}></FontAwesomeIcon>;
+    return <FontAwesomeIcon icon={toggleMenuIcon} size="2x" onClick={() => toggleMenu()} />;
   };
 
   const contentClasses = classNames('pz-Navigation__content', isMenuActive && 'pz-Navigation__content--active');
@@ -29,13 +29,13 @@ export const Navbar = () => {
       </Link>
       <div className={contentClasses}>
         <div className="pz-Navigation__items">
-          <NavigationItem to="/planning" text="planning" isActive={isMenuActive} />
-          <NavigationItem to="/interiors" text="interiors" isActive={isMenuActive} />
-          <NavigationItem to="/competitions" text="competitions" isActive={isMenuActive} />
+          <NavigationItem to="/planning" text="planning" />
+          <NavigationItem to="/interiors" text="interiors" />
+          <NavigationItem to="/competitions" text="competitions" />
           {/* TODO: GP - uncomment when a solution for the instagram page is developed
           <NavbarItem to="/instagram" text="#puzzle" isActive={isMenuActive} />
           */}
-          <NavigationItem to="/about" text="about/contact" isActive={isMenuActive} />
+          <NavigationItem to="/contact" text="contact" />
         </div>
       </div>
       <div className="pz-Navigation__toggle">{renderToggleIcon()}</div>
