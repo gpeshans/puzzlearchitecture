@@ -3,7 +3,8 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { Page } from '../components/page';
 import { Row } from '../components/grid';
-import { ProjectsListQuery, renderProjectsDataList } from '../data';
+import { ProjectsListQuery, renderProjectsDataList, Category } from '../data';
+import { Breadcrumbs } from '../components/breadcrumbs';
 
 const Competitions = () => {
   const data = useStaticQuery<ProjectsListQuery>(
@@ -34,6 +35,7 @@ const Competitions = () => {
 
   return (
     <Page title="Competitions">
+      <Breadcrumbs category={Category.Competitions} />
       <Row>{renderProjectsDataList(data)}</Row>
     </Page>
   );

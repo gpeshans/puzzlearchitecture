@@ -6,6 +6,7 @@ import { Row, Column } from '../components/grid';
 import { Image } from '../components/image';
 import { ProjectsListQuery } from '../data';
 import './itemTemplate.scss';
+import { Breadcrumbs } from '../components/breadcrumbs';
 
 interface TemplateProps {
   data: ProjectsListQuery;
@@ -15,6 +16,7 @@ const ItemTemplate = ({ data }: TemplateProps) => {
   const project = data.allSitePage.edges[0].node.context;
   return (
     <Page title={project.name} className="pz-ItemTemplate">
+      <Breadcrumbs category={project.category} linkCategory={true} />
       <Row>
         <Column className="pz-ItemTemplate__Title">{project.name}</Column>
       </Row>
