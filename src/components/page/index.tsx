@@ -17,12 +17,8 @@ interface PageProps {
 export const Page = ({ children, title, className = '' }: PageProps) => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
-  console.log('testes');
-
   useEffect(() => {
-    console.log('test');
     document.addEventListener('scroll', () => {
-      console.log('Its happening');
       if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         setHasScrolled(true);
       } else {
