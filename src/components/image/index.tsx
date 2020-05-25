@@ -71,6 +71,7 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
       className={classes}
       fluid={image.node.childImageSharp.fluid}
       durationFadeIn={500}
+      imgStyle={{ objectFit: 'contain' }}
       fadeIn={true}
     />
   );
