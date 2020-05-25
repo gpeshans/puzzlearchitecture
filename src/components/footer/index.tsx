@@ -20,13 +20,25 @@ export const Footer = ({ siteTitle = '' }: FooterProps) => (
           <div>Skopje, North Macedonia</div>
         </Column>
         <Column className="pz-FooterRow__social-media" spanMd={6} spanLg={6} spanXl={6}>
-          <span className="pz-FooterRow__social-media-title--semi-bold">Follow us</span>
-          <a href="https://www.instagram.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faInstagram} /> instagram
-          </a>
-          <a href="https://www.facebook.com/puzzle.architecture/" target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon icon={faFacebookF} /> facebook
-          </a>
+          <span>Follow us</span>
+          <div>
+            <a
+              href="https://www.instagram.com/_puzzle_arch/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pz-FooterRow__social-media-link"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a
+              href="https://www.facebook.com/puzzle.architecture/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="pz-FooterRow__social-media-link"
+            >
+              <FontAwesomeIcon icon={faFacebookF} />
+            </a>
+          </div>
         </Column>
       </Row>
     </ContainerFluid>

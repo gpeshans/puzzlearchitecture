@@ -18,10 +18,8 @@ const ItemTemplate = ({ data }: TemplateProps) => {
     <Page title={project.name} className="pz-ItemTemplate">
       <Breadcrumbs category={project.category} linkCategory={true} />
       <Row>
-        <Column className="pz-ItemTemplate__Title">{project.name}</Column>
-      </Row>
-      <Row>
         <Column spanSm={12} spanMd={4} spanLg={3} spanXl={3}>
+          <Row className="pz-ItemTemplate__Title">{project.name}</Row>
           <Row className="pz-ItemTemplate__Field">
             <Column className="pz-ItemTemplate__Field__Label">Location</Column>
             <Column className="pz-ItemTemplate__Field__Value">{project.location}</Column>

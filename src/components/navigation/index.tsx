@@ -20,14 +20,14 @@ export const Navbar = () => {
     return <FontAwesomeIcon icon={toggleMenuIcon} size="2x" onClick={() => toggleMenu()} />;
   };
 
-  const contentClasses = classNames('pz-Navigation__content', isMenuActive && 'pz-Navigation__content--active');
-
   return (
     <div className="pz-Navigation">
-      <Link to="/" className="pz-Navigation__logo">
-        <Logo />
-      </Link>
-      <div className={contentClasses}>
+      <div className="pz-Navigation__logo">
+        <Link to="/">
+          <Logo />
+        </Link>
+      </div>
+      <div className={classNames('pz-Navigation__content', isMenuActive && 'pz-Navigation__content--active')}>
         <div className="pz-Navigation__items">
           <NavigationItem to="/planning" text="planning" />
           <NavigationItem to="/interiors" text="interiors" />
