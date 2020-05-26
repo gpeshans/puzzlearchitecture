@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/gpeshans/puzzlearchitecture.svg?branch=master)](https://travis-ci.org/gpeshans/puzzlearchitecture)
+[![Build Status](https://travis-ci.org/gpeshans/puzzlearchitecture.svg?branch=master)](https://travis-ci.org/gpeshans/puzzlearchitecture) [![Netlify Status](https://api.netlify.com/api/v1/badges/622a0fbf-101d-440a-823c-a549c1faabc9/deploy-status)](https://app.netlify.com/sites/awesome-knuth-dd3503/deploys)
 
 # puzzle.architecture
 
