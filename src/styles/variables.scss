@@ -5,7 +5,8 @@ $screen__bp-lg: 992;
 $screen__bp-xl: 1200;
 
 // Fonts
-$font-family-base: 'Source Sans Pro', sans-serif;
+$font-family-base: 'Montserrat';
+$font-family-title: 'Courier Prime';
 $font-size-base: 14px;
 
 // Colors
@@ -13,3 +14,6 @@ $cl-primary: #333333;
 $cl-primary-light: #757575;
 $cl-white: #ffffff;
 $cl-black: #000000;
+
+// Sizes
+$footer-height: 100px;

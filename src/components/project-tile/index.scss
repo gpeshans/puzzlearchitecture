@@ -27,7 +27,7 @@
 
   &__image-overlay-text {
     color: $cl-primary;
-    font-size: 10vh;
+    font-size: 4em;
     font-weight: lighter;
     position: absolute;
     top: 50%;
@@ -45,6 +45,6 @@
   &__info {
     padding: 1vh;
     text-align: center;
-    text-transform: uppercase;
+    text-transform: lowercase;
   }
 }

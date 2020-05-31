@@ -37,12 +37,14 @@ export const Page = ({ children, title, className = '' }: PageProps) => {
       <SEO title={title} />
       <ContainerFluid className={className}>{children}</ContainerFluid>
       {hasScrolled && (
-        <FontAwesomeIcon
-          onClick={toTop}
-          icon={faArrowCircleUp}
-          size="3x"
-          className="pz-Page__back-to-top"
-        ></FontAwesomeIcon>
+        <div className="pz-Page__back-to-top">
+          <FontAwesomeIcon
+            onClick={toTop}
+            icon={faArrowCircleUp}
+            size="3x"
+            className="pz-Page__back-to-top-icon"
+          ></FontAwesomeIcon>
+        </div>
       )}
     </Layout>
   );

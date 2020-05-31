@@ -1,12 +1,10 @@
 @import '../../styles/variables.scss';
 
 .pz-FooterRow {
-  // min-height: 5vh;
-  margin-top: 50px;
-
-  font-size: 2.5vh;
+  height: 100px;
+  font-size: 1.5em;
   font-weight: lighter;
-  align-content: flex-start;
+  align-content: center;
 
   &__info {
     display: flex;

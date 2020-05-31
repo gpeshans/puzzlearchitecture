@@ -22,7 +22,7 @@ export const ProjectTile = ({ name, location, year, titleImage }: ProjectTilePro
         </div>
       </div>
       <div className="pz-ProjectTile__info">
-        {name} / {location} / {year}
+        {name} | {location} | {year}
       </div>
     </Link>
   </div>

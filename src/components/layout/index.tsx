@@ -30,7 +30,7 @@ export const Layout = ({ children }: LayoutProps) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header />
       <main>{children}</main>
       <Footer siteTitle={data.site.siteMetadata.title} />
     </>

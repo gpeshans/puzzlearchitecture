@@ -1,5 +1,8 @@
+@import '../styles/variables.scss';
+
 .pz-ItemTemplate {
   &__Title {
+    font: normal $font-size-base $font-family-title;
     font-size: 3.5em;
     padding-bottom: 2vh;
     padding-top: 2vh;
