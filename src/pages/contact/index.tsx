@@ -54,7 +54,7 @@ const Contact = () => {
                 <p>
                   <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
                 </p>
-                <p>Skopje, North Macedonia </p>
+                <p>North Macedonia </p>
               </Column>
               <Column className="pzContact__contact-form-row">
                 <label htmlFor="name">Name</label>

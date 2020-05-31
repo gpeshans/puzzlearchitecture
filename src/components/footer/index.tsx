@@ -17,7 +17,7 @@ export const Footer = ({ siteTitle = '' }: FooterProps) => (
           <span>
             © {new Date().getFullYear()} {siteTitle}
           </span>
-          <div>Skopje, North Macedonia</div>
+          <div>North Macedonia</div>
         </Column>
         <Column className="pz-FooterRow__social-media" spanMd={6} spanLg={6} spanXl={6}>
           <span>Follow us</span>

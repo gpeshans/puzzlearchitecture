@@ -35,7 +35,7 @@ export const Navbar = () => {
           {/* TODO: GP - uncomment when a solution for the instagram page is developed
           <NavbarItem to="/instagram" text="#puzzle" isActive={isMenuActive} />
           */}
-          <NavigationItem to="/contact" text="contact" />
+          <NavigationItem to="/contact" text="info / contact" />
         </div>
       </div>
       <div className="pz-Navigation__toggle">{renderToggleIcon()}</div>
