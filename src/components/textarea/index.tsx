@@ -4,14 +4,14 @@ import './index.scss';
 
 interface TextAreaProps extends React.HTMLProps<React.TextareaHTMLAttributes<HTMLTextAreaElement>> {
   onChange: (event: any) => void;
-  id: string;
+  name: string;
 }
 
-export const Textarea = ({ onChange, id, required = false, placeholder = '' }: TextAreaProps) => {
+export const Textarea = ({ onChange, name, required = false, placeholder = '' }: TextAreaProps) => {
   return (
     <textarea
-      id={id}
-      name={id}
+      id={name}
+      name={name}
       placeholder={placeholder}
       onChange={onChange}
       className="pzTextarea"

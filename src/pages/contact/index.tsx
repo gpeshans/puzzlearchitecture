@@ -3,36 +3,38 @@ import * as React from 'react';
 import { Page } from '../../components/page';
 import { Button } from '../../components/button';
 import { Row, Column } from '../../components/grid';
+
+import './index.scss';
+import { navigate } from 'gatsby';
 import { Input } from '../../components/input';
 import { Textarea } from '../../components/textarea';
 
-import './index.scss';
+function encode(data: any) {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+}
 
 const Contact = () => {
-  const [name, setName] = React.useState('');
-  const [email, setEmail] = React.useState('');
-  const [message, setMessage] = React.useState('');
-  const emailAddress = 'puzzle.arch@outlook.com';
+  const [state, setState] = React.useState({});
+
+  const onChange = (event: any) => {
+    setState({ ...state, [event.target.name]: event.target.value });
+  };
 
   const onSubmit = (event: any) => {
     event.preventDefault();
-
-    const subject = encodeURIComponent(`${name} (${email})`);
-    const body = encodeURIComponent(message);
-
-    window.location.href = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
-  };
-
-  const onNameChange = (event: any) => {
-    setName(event.target.value);
-  };
-
-  const onEmailChange = (event: any) => {
-    setEmail(event.target.value);
-  };
-
-  const onMessageChange = (event: any) => {
-    setMessage(event.target.value);
+    const form = event.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...state,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -49,20 +51,27 @@ const Contact = () => {
             </p>
           </Row>
           <Row className="pzContact__contact-form-title">Contact Us</Row>
-          <form name="contactForm" onSubmit={onSubmit}>
+          <form
+            name="contact"
+            method="post"
+            action="/thanks/"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onSubmit={onSubmit}
+          >
+            <input type="hidden" name="form-name" value="contact" />
             <Row className="pzContact__contact-form">
-              {/* TODO: GP - implement send email lambda and adjust the form */}
               <Column className="pzContact__contact-form-row">
                 <label htmlFor="name">Name</label>
-                <Input id="name" onChange={onNameChange} required={true} maxLength={120} />
+                <Input name="name" required={true} maxLength={120} onChange={onChange} />
               </Column>
               <Column className="pzContact__contact-form-row">
                 <label htmlFor="email">Email</label>
-                <Input id="email" type="email" onChange={onEmailChange} required={true} maxLength={254} />
+                <Input name="email" type="email" required={true} maxLength={254} onChange={onChange} />
               </Column>
               <Column className="pzContact__contact-form-row">
                 <label htmlFor="message">Message</label>
-                <Textarea id="message" onChange={onMessageChange} required={true} maxLength={256} />
+                <Textarea name="message" required={true} maxLength={256} onChange={onChange} />
               </Column>
               <Column className="pzContact__contact-form-row pzContact__contact-form-submit-button">
                 <Button text="Send" type="submit" />
