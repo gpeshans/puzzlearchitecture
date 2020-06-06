@@ -18,7 +18,7 @@ const ItemTemplate = ({ data }: TemplateProps) => {
     <Page title={project.name} className="pz-ItemTemplate">
       <Breadcrumbs category={project.category} linkCategory={true} />
       <Row>
-        <Column spanSm={12} spanMd={4} spanLg={3} spanXl={3}>
+        <Column spanSm={12} spanMd={12} spanLg={4} spanXl={3} className="pz-ItemTemplate__Metadata">
           <Row className="pz-ItemTemplate__Title">{project.name}</Row>
           <Row className="pz-ItemTemplate__Field">
             <Column className="pz-ItemTemplate__Field__Label">Location</Column>
@@ -45,13 +45,13 @@ const ItemTemplate = ({ data }: TemplateProps) => {
             </Row>
           ) : null}
         </Column>
-        <Column spanSm={12} spanMd={8} spanLg={9} spanXl={9}>
+        <Column spanSm={12} spanMd={12} spanLg={8} spanXl={9}>
           <Row>
             <Column className="pz-ItemTemplate__Image">
               <Image filename={project.titleImage} />
             </Column>
           </Row>
-          {project.images.map(image => (
+          {project.images.map((image) => (
             <Row key={image}>
               <Column className="pz-ItemTemplate__Image">
                 <Image filename={image} />

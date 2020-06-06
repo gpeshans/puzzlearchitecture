@@ -44,9 +44,8 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
             relativePath
             name
             childImageSharp {
-              fluid(maxWidth: 1800, maxHeight: 1800) {
-                ...GatsbyImageSharpFluid_withWebp
-                presentationWidth
+              fluid {
+                ...GatsbyImageSharpFluid_tracedSVG
               }
             }
           }
@@ -55,7 +54,7 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
     }
   `);
 
-  const image = data.images.edges.find(n => {
+  const image = data.images.edges.find((n) => {
     return n.node.relativePath.includes(filename);
   });
 
@@ -71,7 +70,7 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
       className={classes}
       fluid={image.node.childImageSharp.fluid}
       durationFadeIn={500}
-      imgStyle={{ objectFit: 'contain' }}
+      imgStyle={{ objectFit: 'contain', objectPosition: 'center top' }}
       fadeIn={true}
     />
   );

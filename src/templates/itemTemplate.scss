@@ -2,29 +2,30 @@
 
 .pz-ItemTemplate {
   &__Title {
-    font-size: 3.5em;
-    padding-bottom: 2vh;
-    padding-top: 2vh;
-    padding-right: 40px;
+    font-size: $font-size-title;
+    padding: 20px 40px 20px 0;
     text-transform: uppercase;
   }
 
+  &__Metadata {
+    padding-bottom: 40px;
+  }
+
   &__Field {
-    padding-bottom: 2vh;
+    padding-bottom: 20px;
   }
 
   &__Field__Label {
-    font-size: 1em;
     font-weight: lighter;
   }
 
   &__Field__Value {
-    font-size: 1.5em;
+    font-size: $font-size-large;
     font-weight: lighter;
     padding-right: 40px;
   }
 
   &__Image {
-    padding-bottom: 5vh;
+    padding-bottom: 50px;
   }
 }

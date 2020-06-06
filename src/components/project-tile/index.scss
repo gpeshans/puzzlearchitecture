@@ -6,7 +6,7 @@
   flex-direction: column;
 
   margin-bottom: 1vh;
-  padding: 1vh;
+  padding: 15px;
 
   a {
     cursor: pointer;
@@ -27,7 +27,7 @@
 
   &__image-overlay-text {
     color: $cl-primary;
-    font-size: 4em;
+    font-size: $font-size-title;
     font-weight: lighter;
     position: absolute;
     top: 50%;
@@ -46,5 +46,7 @@
     padding: 1vh;
     text-align: center;
     text-transform: lowercase;
+    font-size: $font-size-medium;
+    font-weight: lighter;
   }
 }

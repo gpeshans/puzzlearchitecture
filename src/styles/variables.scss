@@ -1,13 +1,17 @@
 // Screen width break points modifier
 $screen__bp-sm: 360;
-$screen__bp-md: 600;
-$screen__bp-lg: 992;
+$screen__bp-md: 768;
+$screen__bp-lg: 1024;
 $screen__bp-xl: 1200;
 
 // Fonts
 $font-family-base: 'Montserrat';
 $font-family-title: 'Courier Prime';
 $font-size-base: 14px;
+$font-size-medium-small: 16px;
+$font-size-medium: 18px;
+$font-size-large: 21px;
+$font-size-title: 45px;
 
 // Colors
 $cl-primary: #333333;
