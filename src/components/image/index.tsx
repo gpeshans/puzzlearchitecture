@@ -17,7 +17,18 @@ import './index.scss';
  */
 
 interface ImgData {
-  images: {
+  desktopImages: {
+    edges: {
+      node: {
+        relativePath: string;
+        name: string;
+        childImageSharp: {
+          fluid: FluidObject;
+        };
+      };
+    }[];
+  };
+  mobileImages: {
     edges: {
       node: {
         relativePath: string;
@@ -38,7 +49,7 @@ interface ImgProps {
 export const Image = ({ filename, className = '' }: ImgProps) => {
   const data = useStaticQuery<ImgData>(graphql`
     query {
-      images: allFile {
+      desktopImages: allFile {
         edges {
           node {
             relativePath
@@ -51,24 +62,50 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
           }
         }
       }
+      mobileImages: allFile {
+        edges {
+          node {
+            relativePath
+            name
+            childImageSharp {
+              fluid(maxWidth: 800, maxHeight: 800) {
+                ...GatsbyImageSharpFluid_tracedSVG
+              }
+            }
+          }
+        }
+      }
     }
   `);
 
-  const image = data.images.edges.find((n) => {
+  const desktopImage = data.desktopImages.edges.find((n) => {
     return n.node.relativePath.includes(filename);
   });
 
-  if (!image) {
+  const mobileImage = data.mobileImages.edges.find((n) => {
+    return n.node.relativePath.includes(filename);
+  });
+
+  if (!desktopImage && !mobileImage) {
     return null;
   }
 
   const classes = classNames('pz-Img', className);
 
+  const imageSources: FluidObject[] = [];
+
+  mobileImage && imageSources.push(mobileImage.node.childImageSharp.fluid);
+  desktopImage &&
+    imageSources.push({
+      ...desktopImage.node.childImageSharp.fluid,
+      media: `(min-width: 768px)`,
+    });
+
   return (
     <Img
       alt={filename}
       className={classes}
-      fluid={image.node.childImageSharp.fluid}
+      fluid={imageSources}
       durationFadeIn={500}
       imgStyle={{ objectFit: 'contain', objectPosition: 'center top' }}
       fadeIn={true}

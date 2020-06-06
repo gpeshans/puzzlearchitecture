@@ -6,7 +6,6 @@
   flex-direction: column;
 
   margin-bottom: 1vh;
-  padding: 15px;
 
   a {
     cursor: pointer;
@@ -48,5 +47,9 @@
     text-transform: lowercase;
     font-size: $font-size-medium;
     font-weight: lighter;
+  }
+
+  @media all and (min-width: $screen__bp-md *1px) {
+    padding: 15px;
   }
 }
