@@ -41,21 +41,17 @@ const Contact = () => {
         <Column spanLg={6} spanXl={6}>
           <Row className="pzContact__content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-              ea commodo consequat.
+              Puzzle is a collective of young and enthusiastic architects established in 2018. As a team, we have worked
+              on a wide spectrum of projects including exhibitions, interior design, architectural projects, conceptual
+              projects, research, etc. and successfully participated in many competitions. Throughout our work, we try
+              to have a research-oriented approach thus creating more sustainable, outspoken, and creative solutions for
+              all architectural challenges.
             </p>
           </Row>
-          <Row className="pzContact__contact-form-title">Contact</Row>
+          <Row className="pzContact__contact-form-title">Contact Us</Row>
           <form name="contactForm" onSubmit={onSubmit}>
             <Row className="pzContact__contact-form">
               {/* TODO: GP - implement send email lambda and adjust the form */}
-              <Column className="pzContact__contact-form-row">
-                <p>
-                  <a href={`mailto:${emailAddress}`}>{emailAddress}</a>
-                </p>
-                <p>North Macedonia </p>
-              </Column>
               <Column className="pzContact__contact-form-row">
                 <label htmlFor="name">Name</label>
                 <Input id="name" onChange={onNameChange} required={true} maxLength={120} />
