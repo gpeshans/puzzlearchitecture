@@ -20,12 +20,53 @@
   }
 
   &__Field__Value {
-    font-size: $font-size-large;
+    font-size: $font-size-medium;
     font-weight: lighter;
-    padding-right: 40px;
+
+    &__Description {
+      text-align: justify;
+      font-size: $font-size-medium-small;
+      white-space: pre-line;
+    }
   }
 
   &__Image {
-    padding-bottom: 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 50px;
+
+    cursor: pointer;
+
+    &-overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: $cl-white;
+    }
+
+    &-overlay-text {
+      color: $cl-primary;
+      font-size: $font-size-title;
+      font-weight: lighter;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+
+    &:hover &-overlay {
+      opacity: 0.5;
+    }
   }
 }

@@ -11,20 +11,20 @@ const Competitions = () => {
     graphql`
       query {
         allSitePage(
-          filter: { context: { name: { ne: null }, category: { eq: "competitions" } } }
+          filter: { context: { name: { ne: null }, category: { in: ["competitions"] } } }
           sort: { fields: context___year, order: DESC }
         ) {
           edges {
             node {
               context {
-                category
-                description
-                images
-                location
                 name
+                category
+                location
+                year
+                status
                 surface
                 titleImage
-                year
+                images
               }
             }
           }
@@ -34,7 +34,7 @@ const Competitions = () => {
   );
 
   return (
-    <Page title="Competitions">
+    <Page seoProps={{ title: 'Competitions', path: '/competitions' }}>
       <Breadcrumbs category={Category.Competitions} />
       <Row>{renderProjectsDataList(data)}</Row>
     </Page>

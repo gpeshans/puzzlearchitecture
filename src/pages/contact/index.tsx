@@ -38,7 +38,7 @@ const Contact = () => {
   };
 
   return (
-    <Page title="Contact">
+    <Page seoProps={{ title: 'Contact', path: '/contact' }}>
       <Row className="pzContact">
         <Column spanLg={6} spanXl={6}>
           <Row className="pzContact__content">

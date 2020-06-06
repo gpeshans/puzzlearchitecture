@@ -2,10 +2,4 @@
 
 .pz-Img {
   width: 100%;
-
-  @media all and (min-width: $screen__bp-md *1px) {
-    > div:first-child {
-      padding-bottom: 50% !important;
-    }
-  }
 }

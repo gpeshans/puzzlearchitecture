@@ -9,7 +9,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const template = path.resolve(`src/templates/itemTemplate.tsx`);
 
   // create page for every item
-  data.forEach(item => {
+  data.forEach((item) => {
     createPage({
       path: kebabCase(item.name),
       component: template,

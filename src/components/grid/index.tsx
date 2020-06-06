@@ -42,6 +42,7 @@ interface ColumnProps {
   hiddenMdDown?: boolean;
   hiddenLgDown?: boolean;
   hiddenXlDown?: boolean;
+  onClick?: React.MouseEventHandler;
 }
 
 /**
@@ -91,6 +92,7 @@ export const Column = ({
   hiddenLgDown = false,
   hiddenXlUp = false,
   hiddenXlDown = false,
+  onClick,
 }: ColumnProps) => {
   const classes = classNames(
     `container__col-sm-${spanSm}`,
@@ -112,5 +114,9 @@ export const Column = ({
     hiddenXlDown && `hidden-xl-down`,
     className,
   );
-  return <div className={classes}>{children}</div>;
+  return (
+    <div className={classes} onClick={onClick}>
+      {children}
+    </div>
+  );
 };

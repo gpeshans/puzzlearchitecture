@@ -8,7 +8,7 @@ import './index.scss';
 
 interface ProjectTileProps {
   name: string;
-  location: string;
+  location?: string;
   year: number;
   titleImage: string;
 }
@@ -30,14 +30,14 @@ interface ProjectTileImgData {
 export const ProjectTile = ({ name, location, year, titleImage }: ProjectTileProps) => {
   const imageData = useStaticQuery<ProjectTileImgData>(graphql`
     query {
-      images: allFile {
+      images: allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" } }) {
         edges {
           node {
             relativePath
             name
             childImageSharp {
               fluid(maxWidth: 800, maxHeight: 800) {
-                ...GatsbyImageSharpFluid_tracedSVG
+                ...GatsbyImageSharpFluid
               }
             }
           }
@@ -70,7 +70,7 @@ export const ProjectTile = ({ name, location, year, titleImage }: ProjectTilePro
           </div>
         </div>
         <div className="pz-ProjectTile__info">
-          {name} | {location} | {year}
+          {name} | {location && `${location} |`} {year}
         </div>
       </Link>
     </div>

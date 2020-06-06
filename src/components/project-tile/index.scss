@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 1vh;
+  margin-bottom: 50px;
 
   a {
     cursor: pointer;
@@ -50,6 +50,6 @@
   }
 
   @media all and (min-width: $screen__bp-md *1px) {
-    padding: 15px;
+    padding: 0 15px;
   }
 }

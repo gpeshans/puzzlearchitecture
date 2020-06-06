@@ -29,9 +29,10 @@ export const Navbar = () => {
       </div>
       <div className={classNames('pz-Navigation__content', isMenuActive && 'pz-Navigation__content--active')}>
         <div className="pz-Navigation__items">
-          <NavigationItem to="/planning" text="planning" />
-          <NavigationItem to="/interiors" text="interiors" />
+          <NavigationItem to="/architecture" text="architecture" />
+          <NavigationItem to="/interior-design" text="interior design" />
           <NavigationItem to="/competitions" text="competitions" />
+          <NavigationItem to="/research" text="research" />
           {/* TODO: GP - uncomment when a solution for the instagram page is developed
           <NavbarItem to="/instagram" text="#puzzle" isActive={isMenuActive} />
           */}

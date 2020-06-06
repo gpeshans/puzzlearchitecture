@@ -1,8 +1,9 @@
 import * as React from 'react';
 import classNames from 'classnames';
 import { useStaticQuery, graphql } from 'gatsby';
-import Img, { FluidObject } from 'gatsby-image';
+import Img from 'gatsby-image';
 
+import { ImgData } from '../../data';
 import './index.scss';
 
 /*
@@ -16,31 +17,6 @@ import './index.scss';
  * - `useStaticQuery`: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
-interface ImgData {
-  desktopImages: {
-    edges: {
-      node: {
-        relativePath: string;
-        name: string;
-        childImageSharp: {
-          fluid: FluidObject;
-        };
-      };
-    }[];
-  };
-  mobileImages: {
-    edges: {
-      node: {
-        relativePath: string;
-        name: string;
-        childImageSharp: {
-          fluid: FluidObject;
-        };
-      };
-    }[];
-  };
-}
-
 interface ImgProps {
   filename: string;
   className?: string;
@@ -49,27 +25,15 @@ interface ImgProps {
 export const Image = ({ filename, className = '' }: ImgProps) => {
   const data = useStaticQuery<ImgData>(graphql`
     query {
-      desktopImages: allFile {
+      images: allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" } }) {
         edges {
           node {
             relativePath
             name
             childImageSharp {
-              fluid {
-                ...GatsbyImageSharpFluid_tracedSVG
-              }
-            }
-          }
-        }
-      }
-      mobileImages: allFile {
-        edges {
-          node {
-            relativePath
-            name
-            childImageSharp {
-              fluid(maxWidth: 800, maxHeight: 800) {
-                ...GatsbyImageSharpFluid_tracedSVG
+              fluid(maxWidth: 1800) {
+                ...GatsbyImageSharpFluid
+                presentationWidth
               }
             }
           }
@@ -78,35 +42,21 @@ export const Image = ({ filename, className = '' }: ImgProps) => {
     }
   `);
 
-  const desktopImage = data.desktopImages.edges.find((n) => {
+  const desktopImage = data.images.edges.find((n) => {
     return n.node.relativePath.includes(filename);
   });
 
-  const mobileImage = data.mobileImages.edges.find((n) => {
-    return n.node.relativePath.includes(filename);
-  });
-
-  if (!desktopImage && !mobileImage) {
+  if (!desktopImage) {
     return null;
   }
 
   const classes = classNames('pz-Img', className);
 
-  const imageSources: FluidObject[] = [];
-
-  mobileImage && imageSources.push(mobileImage.node.childImageSharp.fluid);
-  desktopImage &&
-    imageSources.push({
-      ...desktopImage.node.childImageSharp.fluid,
-      media: `(min-width: 768px)`,
-    });
-
   return (
     <Img
       alt={filename}
       className={classes}
-      fluid={imageSources}
-      durationFadeIn={500}
+      fluid={desktopImage.node.childImageSharp.fluid}
       imgStyle={{ objectFit: 'contain', objectPosition: 'center top' }}
       fadeIn={true}
     />

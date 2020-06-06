@@ -4,37 +4,45 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowCircleUp } from '@fortawesome/free-solid-svg-icons';
 
 import { ContainerFluid } from '../grid';
-import { SEO } from '../seo';
+import { SEO, SEOProps } from '../seo';
 import { Layout } from '../layout';
 import './index.scss';
 
 interface PageProps {
   children: React.ReactNode;
-  title: string;
   className?: string;
+  seoProps?: SEOProps;
 }
 
-export const Page = ({ children, title, className = '' }: PageProps) => {
+const FOOTER_HEIGHT = 100;
+
+export const Page = ({ children, className = '', seoProps }: PageProps) => {
   const [hasScrolled, setHasScrolled] = useState(false);
+  const [bottomPosition, setBottomPosition] = useState(10);
 
   useEffect(() => {
-    document.addEventListener('scroll', () => {
-      if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    const handleScroll = () => {
+      if (document.documentElement.scrollTop > FOOTER_HEIGHT) {
         setHasScrolled(true);
+        setBottomPosition(10);
       } else {
         setHasScrolled(false);
       }
-    });
+    };
+
+    document.addEventListener('scroll', handleScroll);
+
+    // do not forget to unsubscribe :)
+    return () => document.removeEventListener('scroll', handleScroll);
   });
 
   const toTop = () => {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    document.documentElement.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
     <Layout>
-      <SEO title={title} />
+      <SEO {...seoProps} />
       <ContainerFluid className={className}>{children}</ContainerFluid>
       {hasScrolled && (
         <div className="pz-Page__back-to-top">
@@ -43,6 +51,7 @@ export const Page = ({ children, title, className = '' }: PageProps) => {
             icon={faArrowCircleUp}
             size="3x"
             className="pz-Page__back-to-top-icon"
+            style={{ bottom: `${bottomPosition}px` }}
           ></FontAwesomeIcon>
         </div>
       )}

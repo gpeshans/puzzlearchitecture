@@ -1,16 +1,16 @@
 @import '../../styles/variables.scss';
 
 .pz-FooterRow {
-  height: 100px;
+  height: $footer-height;
   font-size: $font-size-medium;
   font-weight: lighter;
   align-content: center;
+  margin-bottom: 50px;
 
   &__info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2.5vh;
     order: 2;
   }
 
@@ -18,7 +18,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2.5vh;
     order: 1;
   }
 

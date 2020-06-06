@@ -8,18 +8,19 @@ import { renderProjectsDataList, ProjectsListQuery } from '../data';
 const IndexPage = () => {
   const data = useStaticQuery<ProjectsListQuery>(graphql`
     query {
-      allSitePage(filter: { context: { name: { ne: null } } }, sort: { fields: context___year, order: DESC }) {
+      allSitePage(filter: { context: { name: { ne: null } } }, sort: { fields: context___id, order: DESC }) {
         edges {
           node {
             context {
-              category
-              description
-              images
-              location
+              id
               name
+              category
+              location
+              year
+              status
               surface
               titleImage
-              year
+              images
             }
           }
         }
@@ -28,7 +29,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Page title="Puzzle">
+    <Page seoProps={{ title: 'Puzzle architecture' }}>
       <Row>{renderProjectsDataList(data)}</Row>
     </Page>
   );
