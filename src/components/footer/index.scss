@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .pz-FooterRow {
-  height: 100px;
+  height: $footer-height;
   font-size: $font-size-medium;
   font-weight: lighter;
   align-content: center;
