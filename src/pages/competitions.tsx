@@ -3,28 +3,28 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { Page } from '../components/page';
 import { Row } from '../components/grid';
-import { ProjectsListQuery, renderProjectsDataList, Category } from '../data';
-import { Breadcrumbs } from '../components/breadcrumbs';
+import { ProjectsListQuery, renderProjectsDataList } from '../data';
 
 const Competitions = () => {
   const data = useStaticQuery<ProjectsListQuery>(
     graphql`
       query {
         allSitePage(
-          filter: { context: { name: { ne: null }, category: { eq: "competitions" } } }
+          filter: { context: { name: { ne: null }, category: { in: ["competitions"] } } }
           sort: { fields: context___year, order: DESC }
         ) {
           edges {
             node {
               context {
-                category
-                description
-                images
-                location
                 name
+                category
+                location
+                year
+                status
                 surface
                 titleImage
-                year
+                images
+                description
               }
             }
           }
@@ -35,7 +35,6 @@ const Competitions = () => {
 
   return (
     <Page title="Competitions">
-      <Breadcrumbs category={Category.Competitions} />
       <Row>{renderProjectsDataList(data)}</Row>
     </Page>
   );

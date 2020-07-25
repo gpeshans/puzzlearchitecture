@@ -30,7 +30,7 @@ interface ProjectTileImgData {
 export const ProjectTile = ({ name, location, year, titleImage }: ProjectTileProps) => {
   const imageData = useStaticQuery<ProjectTileImgData>(graphql`
     query {
-      images: allFile {
+      images: allFile(filter: { extension: { regex: "/(jpg)|(jpeg)|(png)/" } }) {
         edges {
           node {
             relativePath

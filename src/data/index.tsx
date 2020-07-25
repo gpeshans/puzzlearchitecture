@@ -7,12 +7,10 @@ import { ProjectTile } from '../components/project-tile';
  * Project category.
  */
 export enum Category {
-  Planning = 'planning',
-  Interiors = 'interiors',
   Competitions = 'competitions',
-  Residential = 'residential',
-  Commercial = 'commercial',
-  Public = 'public',
+  Architecture = 'architecture',
+  InteriorDesign = 'interior design',
+  Research = 'research',
 }
 
 /**
@@ -20,12 +18,13 @@ export enum Category {
  */
 export interface ProjectItem {
   name: string;
-  category: Category;
+  category: Category[];
   location: string;
   year: number;
+  status?: string;
+  surface?: number;
   titleImage: string;
   images: string[];
-  surface?: number;
   description?: string;
 }
 
@@ -47,7 +46,7 @@ export interface ProjectsListQuery {
  * @param data the data to render
  */
 export const renderProjectsDataList = (data: ProjectsListQuery) => {
-  return data.allSitePage.edges.map(edge => {
+  return data.allSitePage.edges.map((edge) => {
     const project = edge.node.context;
     return (
       <Column key={project.name} spanXl={3} spanLg={4} spanMd={6} spanSm={12}>

@@ -12,14 +12,15 @@ const IndexPage = () => {
         edges {
           node {
             context {
-              category
-              description
-              images
-              location
               name
+              category
+              location
+              year
+              status
               surface
               titleImage
-              year
+              images
+              description
             }
           }
         }
