@@ -95,7 +95,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3905517708.json",
-    "revision": "1d3633faf61b9d34ac73e75bac74a527"
+    "revision": "4de799a016b672eb5a2011e06a56f03d"
   },
   {
     "url": "component---src-pages-interior-design-tsx-107fcbea4bf77ef5dc70.js"
