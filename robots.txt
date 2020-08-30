@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thanks
+Disallow: /404
+Sitemap: https://www.puzzlearchitecture.com/sitemap.xml
+Host: https://www.puzzlearchitecture.com

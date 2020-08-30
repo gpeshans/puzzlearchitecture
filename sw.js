@@ -27,20 +27,20 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-197f856cfb2c39611dc7.js"
+    "url": "webpack-runtime-56a61f361c5f5983b2e2.js"
   },
   {
-    "url": "framework-4e1587a5f74ce58d6e54.js"
+    "url": "framework-5e713f507919262c2771.js"
   },
   {
-    "url": "app-c04a0c9f5726b8baccc9.js"
+    "url": "app-0538ee79aaaeed0eb2c3.js"
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "855994754a3c52acb4208db2a48df45f"
+    "revision": "f8d808583e0b0bf16e338d560b8ab7cb"
   },
   {
-    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-e588307c74237b78b55f.js"
+    "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-4dfecd1f2d0e74648e38.js"
   },
   {
     "url": "page-data/offline-plugin-app-shell-fallback/page-data.json",
@@ -48,34 +48,34 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "a3a9614e8aa0b1eebd9878557811404b"
+    "revision": "8a5a89f141e17a14ba644c7e9da15a7b"
   },
   {
-    "url": "polyfill-38b0149cc40c19111f01.js"
+    "url": "polyfill-5e7a67930d782b90431b.js"
   },
   {
     "url": "styles.787e8a2e758a4788f399.css"
   },
   {
-    "url": "styles-e446e4b070fb3e2c44d9.js"
+    "url": "styles-8d3db5124725dcff78a7.js"
   },
   {
-    "url": "cb1608f2-35cf6f62625d155fd40a.js"
+    "url": "cb1608f2-5e53be20e965d0acb661.js"
   },
   {
-    "url": "a9a7754c-e5456aafd0576af950dc.js"
+    "url": "a9a7754c-bd7670fbbb1152ff6117.js"
   },
   {
-    "url": "29107295-a04a93d999339514fd4b.js"
+    "url": "29107295-8c275308860c62a08479.js"
   },
   {
-    "url": "16fdeb06ce1efded237e92f04bd43b8e894847ab-cb69e1092a2912d4b7ba.js"
+    "url": "16fdeb06ce1efded237e92f04bd43b8e894847ab-40704b9f3757eb3e1f9e.js"
   },
   {
-    "url": "74ddf90431988fbd71d4a9003a20c85974dd4068-fbe98da9d38df6fe95de.js"
+    "url": "74ddf90431988fbd71d4a9003a20c85974dd4068-3757b8b010c55b27a888.js"
   },
   {
-    "url": "component---src-pages-architecture-tsx-85a868285662e9066318.js"
+    "url": "component---src-pages-architecture-tsx-76128ca050d215d14456.js"
   },
   {
     "url": "page-data/architecture/page-data.json",
@@ -95,10 +95,10 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3905517708.json",
-    "revision": "a663d15c4338176ce54819ca4ebf48e4"
+    "revision": "1d3633faf61b9d34ac73e75bac74a527"
   },
   {
-    "url": "component---src-pages-interior-design-tsx-5329dc55a35c56f2f009.js"
+    "url": "component---src-pages-interior-design-tsx-107fcbea4bf77ef5dc70.js"
   },
   {
     "url": "page-data/interior-design/page-data.json",
@@ -109,7 +109,7 @@ self.__precacheManifest = [
     "revision": "1c981bcd25a83bdaf82cecbb9bc42d7b"
   },
   {
-    "url": "component---src-pages-competitions-tsx-32d9ae23776cfc146758.js"
+    "url": "component---src-pages-competitions-tsx-88e4ef32a21eca1c6dba.js"
   },
   {
     "url": "page-data/competitions/page-data.json",
@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "revision": "e33a2a6963eb6315a1d66322fafed3ed"
   },
   {
-    "url": "component---src-pages-research-tsx-1edbba80d982e244845e.js"
+    "url": "component---src-pages-research-tsx-2209d14037c4defe51c9.js"
   },
   {
     "url": "page-data/research/page-data.json",
@@ -131,14 +131,14 @@ self.__precacheManifest = [
     "revision": "f596e22b9f9e1bca60aaaa044df61358"
   },
   {
-    "url": "component---src-pages-contact-index-tsx-9d326354713e55816fc0.js"
+    "url": "component---src-pages-contact-index-tsx-2ee41770cf722633b75a.js"
   },
   {
     "url": "page-data/contact/page-data.json",
     "revision": "b0a30acc6652bca82a652c387bb3e66e"
   },
   {
-    "url": "component---src-pages-404-index-tsx-33b3508e375aacc4007e.js"
+    "url": "component---src-pages-404-index-tsx-e92b3b90c1c22cb8d08a.js"
   },
   {
     "url": "page-data/404/page-data.json",
@@ -238,7 +238,7 @@ const navigationRoute = new NavigationRoute(async ({ event }) => {
   // Check for resources + the app bundle
   // The latter may not exist if the SW is updating to a new version
   const resources = await idbKeyval.get(`resources:${pathname}`)
-  if (!resources || !(await caches.match(`/puzzlearchitecture/app-c04a0c9f5726b8baccc9.js`))) {
+  if (!resources || !(await caches.match(`/puzzlearchitecture/app-0538ee79aaaeed0eb2c3.js`))) {
     return await fetch(event.request)
   }
 

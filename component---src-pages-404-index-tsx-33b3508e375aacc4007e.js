@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[9],{GEoZ:function(t,e,n){"use strict";n.r(e);var o=n("q1tI"),s=n("/PkL");e.default=function(){return o.createElement(s.a,{seoProps:{title:"404 - Not found",path:"/404"}},o.createElement("h1",null,"NOT FOUND"),o.createElement("p",null,"You just hit a route that doesn't exist... the sadness."))}}}]);
-//# sourceMappingURL=component---src-pages-404-index-tsx-33b3508e375aacc4007e.js.map

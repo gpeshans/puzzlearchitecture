@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[16],{ae7B:function(e,n,t){"use strict";t.r(n);var a=t("q1tI"),s=t("/PkL");n.default=function(){return a.createElement(s.a,{seoProps:{title:"Thank you!",path:"/thanks"}},a.createElement("h1",null,"Thank you!"),a.createElement("p",null,"Your message has been successfully sent. We will contact you very soon!"))}}}]);
-//# sourceMappingURL=component---src-pages-thanks-index-tsx-e5c7a4af5cd77e591c45.js.map
