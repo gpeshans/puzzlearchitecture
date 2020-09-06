@@ -1,6 +1,6 @@
 [
   {
-    "id": "project-1",
+    "id": "project-01",
     "name": "Sports centre Vllazerimi",
     "category": ["competitions", "architecture"],
     "location": "Kichevo, North Macedonia",
@@ -35,7 +35,7 @@
     "description": "Sports Center Vllazërimi is located nearby the river Zajacka in Kichevo.\nThe sports complex is a composition of rectangular blocks surrounding an internal plaza. An air bridge and a portico interconnect the separate blocks. A light facade encloses the 7000 - seat football field forming a shopping promenade at the ground level.\n A mixed program block consists of an indoor pool, fitness center, bowling alley and dance rooms positioned on each floor. Its roof hosts an open tennis court and a running track.\nThe football field and the mixed program block are connected with an air bridge faced towards the river, offering fantastic views on the forest. The entrances of the complex are positioned under a floating block which represents a roof of a small part of the inner plaza. A cascade landscape makes a connection with the river."
   },
   {
-    "id": "project-2",
+    "id": "project-02",
     "name": "Ascension tower",
     "category": ["competitions", "architecture"],
     "location": "Zagreb, Croatia",
@@ -63,7 +63,7 @@
     "description": "By the river bank stands the new Zagreb's landmark. This is a transparent one! \nIt holds on to its main core which consists of two elevators and stairs. The highest point, the platform, is where one can observe the city in a 360-degree panoramic view.\nClimbing the outside stairs, one can observe the city from all corners, like walking through a vertical promenade. One can take a break and enjoy the view in two stop points that are extensions of the stairs - forming amphitheatrical seating. These two viewpoints can also be reached via the elevators. A steel structure wraps the entire promenade and its core. It is a semi-transparent skin that intertwines in a vertical and horizontal direction. This white structure forms the body of the tower and connects the inside and the outside.\nThe tower becomes a pure landmark by day and a lighting landmark by night."
   },
   {
-    "id": "project-3",
+    "id": "project-03",
     "name": "Kids factory",
     "category": ["competitions", "architecture"],
     "location": "Laveno Mombello, Italy",
@@ -85,7 +85,7 @@
     "description": "NEVER GROW UP!- is the motto of this project, which takes place in a former pottery factory near the banks of Lake Maggiore. Kids' factory is a whole new planet waiting to be discovered. The scale of the location enables a handful of mini-worlds to take place within the walls of the factory.\nThe new “Kids Boulevard“ serves as a fast route to all the different programs and thematic sectors. The boulevard is a pedestrian walkway but also offers a mini-train ride through the location.\nThe playgrounds consist of 7 thematic sectors each representing a new “world“.\nNew villages, landscapes, and forests offer a touch with nature but also the fantasy world. Much is left to the children's imagination and these are places that do not appeal only for a certain age. Children of all ages can find their own entertainment here.\nThe educational sector occupies an open plan area, forming different unconventional classroom spaces. The research center and the laboratories are situated on the first floor and the accommodation spaces are on the second floor. The old buildings enclose the “Square of Pottery“ which accommodates offices, souvenir shops, and the new museum of pottery.\n“Square of events“ becomes new collective space for Laveno Mombello. The square connects the location with its surroundings while becoming a landmark. The public spaces flow to the roof of the factory which becomes a public space. The new roof terrace offers people a place where they can spend time enjoying the view of the lake."
   },
   {
-    "id": "project-4",
+    "id": "project-04",
     "name": "Rwanda chapel-The cathedral of light",
     "category": ["competitions", "architecture"],
     "location": "Rukomo, Rwanda",
@@ -108,7 +108,7 @@
     "description": "At the top of the mountain, there is a place to wake up the inner peace. A people's chapel to remind us that we are all the same. Its narrow wall is visible from everywhere, so is the calling of the bell. When you reach the chapel there is more than a wall… it's a view of art!\nThe parvis of the chapel is the chapel's backyard, it is the reaching and gathering point, the first impression of the light and the surrounding. This place can be used by a larger audience. It is defined by two walls that constrict at the preaching place to limit the view horizon. The independent wall encloses the plaza and to play with the shadow, the light, the nature.\nSmall arcade openings lead you to the atrium of the chapel. Here, a rain bed welcomes the visitors allowing them to cherish the rainwater, its calming sound, and its purity. The nave is reached through doors made out of transparent wooden interlace. They can be closed when needed, but while open they offer you a ceremonial entry into the chapel… the place to pray, celebrate, cry, and to hope. A circular wall - the symbol of the self, the relationship between man and the whole nature, defines the presbytery, while more is left to the light. Every time the daylight makes the space and the atmosphere different. \nLocal materials are used everywhere, bringing the atmosphere of the earth in each brick and in each wall layer. They offer an archaic, emotional, and intimate feeling of the place. The main walls are from rammed earth, while the other walls play with light and shadow with the absence of a brick. Simple, but with the power to embody the feeling of nostalgia, serenity, death, solitude, silence, beauty, myth, nature, and religion."
   },
   {
-    "id": "project-5",
+    "id": "project-05",
     "name": "Apartment D",
     "category": ["interior design"],
     "location": "Skopje, North Macedonia",
@@ -128,11 +128,10 @@
       "apartment-d-9.jpg",
       "apartment-d-10.jpg",
       "apartment-d-11.jpg"
-    ],
-    "description": ""
+    ]
   },
   {
-    "id": "project-6",
+    "id": "project-06",
     "name": "Seduction pavillion",
     "category": ["competitions"],
     "location": "Bologna, Italy",
@@ -152,7 +151,7 @@
     "description": "The exhibition installation takes place at the entrance of the Foundation Fashion Research, Italy. It aims to pay a tribute to the female beauties that have almost been part of the Hollywood and Italian star system but never achieved fame. The installation celebrates the virtues of elegance, seduction, and refinement of these stars.\nCurvy lines of the wall seduce the visitors to enter the pavilion. A collage of the stars' silhouettes, engraved on the surrounding wall, suggests on what the exhibition is about.\nInside the translucent walls is the photography exhibition.\nA “glory room“ is placed near the exit of the pavilion. It is a small room of mirrors and diamonds creating an infinity effect, where the visitor can take a picture and enjoy a moment of glamour."
   },
   {
-    "id": "project-7",
+    "id": "project-07",
     "name": "Apartment GP",
     "category": ["interior design"],
     "location": "Skopje, North Macedonia",
@@ -184,14 +183,12 @@
       "apartment-gp-22.jpg",
       "apartment-gp-23.jpg",
       "apartment-gp-24.jpg"
-    ],
-    "description": ""
+    ]
   },
   {
-    "id": "project-8",
+    "id": "project-08",
     "name": "Back to nature",
     "category": ["competitions", "research"],
-    "location": "/",
     "year": 2019,
     "status": "international competition-honorable mention",
     "titleImage": "back-to-nature-0.jpg",
@@ -202,7 +199,6 @@
     "id": "project-9",
     "name": "Education everywhere",
     "category": ["competitions", "research"],
-    "location": "/",
     "year": 2018,
     "status": "international competition-1st place",
     "titleImage": "education-everywhere-0.jpg",
@@ -300,7 +296,6 @@
       "apartment-mg-19.jpg",
       "apartment-mg-20.jpg",
       "apartment-mg-21.jpg"
-    ],
-    "description": ""
+    ]
   }
 ]

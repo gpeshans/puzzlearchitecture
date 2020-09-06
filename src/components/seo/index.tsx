@@ -28,10 +28,17 @@ interface SiteDataProps {
       siteUrl: string;
     };
   };
+  logo: {
+    childImageSharp: {
+      fluid: {
+        originalImg: string;
+      };
+    };
+  };
 }
 
 export const SEO = ({ title = '', description = '', lang = 'en', path = '', imageSrc }: SEOProps) => {
-  const { site } = useStaticQuery<SiteDataProps>(
+  const { site, logo } = useStaticQuery<SiteDataProps>(
     graphql`
       query {
         site {
@@ -44,13 +51,21 @@ export const SEO = ({ title = '', description = '', lang = 'en', path = '', imag
             siteUrl
           }
         }
+        logo: file(relativePath: { eq: "logo/puzzle-icon.png" }) {
+          childImageSharp {
+            fluid {
+              originalImg
+            }
+          }
+        }
       }
     `,
   );
 
   const metaDescription = description || site.siteMetadata.description;
   const metaUrl = `${site.siteMetadata.siteUrl}${path}`;
-  const metaImage = imageSrc ? `${site.siteMetadata.siteUrl}${imageSrc}` : null;
+  const logoImage = `${site.siteMetadata.siteUrl}${logo.childImageSharp.fluid.originalImg}`;
+  const metaImage = imageSrc ? `${site.siteMetadata.siteUrl}${imageSrc}` : logoImage;
 
   return (
     <Helmet
