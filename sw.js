@@ -27,7 +27,7 @@ workbox.core.clientsClaim();
  */
 self.__precacheManifest = [
   {
-    "url": "webpack-runtime-513e7d2f671eac6c3f99.js"
+    "url": "webpack-runtime-57661fe9e3fa4cb16a64.js"
   },
   {
     "url": "framework-5e713f507919262c2771.js"
@@ -37,7 +37,7 @@ self.__precacheManifest = [
   },
   {
     "url": "offline-plugin-app-shell-fallback/index.html",
-    "revision": "df93d2d207eb32c0ccfe9d0c1324063e"
+    "revision": "d1e74626fe2542e3abb540ab40253723"
   },
   {
     "url": "component---cache-caches-gatsby-plugin-offline-app-shell-js-4dfecd1f2d0e74648e38.js"
@@ -48,7 +48,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/app-data.json",
-    "revision": "3702b8efd0519748ada16d04729e21a8"
+    "revision": "b07a6eb0406fa4be84389a0d22e56e81"
   },
   {
     "url": "polyfill-5e7a67930d782b90431b.js"
@@ -69,7 +69,7 @@ self.__precacheManifest = [
     "url": "29107295-8c275308860c62a08479.js"
   },
   {
-    "url": "16fdeb06ce1efded237e92f04bd43b8e894847ab-e3d16ee0b8ba4aecc346.js"
+    "url": "16fdeb06ce1efded237e92f04bd43b8e894847ab-4b39350cc744d6d6d50e.js"
   },
   {
     "url": "74ddf90431988fbd71d4a9003a20c85974dd4068-3757b8b010c55b27a888.js"
@@ -79,11 +79,7 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/architecture/page-data.json",
-    "revision": "1a794a976e6646fbaecafb324d18d161"
-  },
-  {
-    "url": "page-data/sq/d/2919552352.json",
-    "revision": "206655c985b5a21ba09e6690e07d9c7d"
+    "revision": "98686de6e3c95bd47d99b2c0afd659d8"
   },
   {
     "url": "page-data/sq/d/2999304408.json",
@@ -95,14 +91,18 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/sq/d/3905517708.json",
-    "revision": "efa444bf48196b8f29411c597b9d5f24"
+    "revision": "f67f4e46eea62c6b8180014eb4cd4106"
+  },
+  {
+    "url": "page-data/sq/d/3982722569.json",
+    "revision": "1eec287297702d2dd86d3d5c48d4fc25"
   },
   {
     "url": "component---src-pages-interior-design-tsx-107fcbea4bf77ef5dc70.js"
   },
   {
     "url": "page-data/interior-design/page-data.json",
-    "revision": "93d2d5737191aab93bde2b1cb2761c10"
+    "revision": "803f07040482443be9fcf903b46b08b6"
   },
   {
     "url": "page-data/sq/d/3871434952.json",
@@ -113,36 +113,36 @@ self.__precacheManifest = [
   },
   {
     "url": "page-data/competitions/page-data.json",
-    "revision": "ec5950837ee7d5f30d1e7511336379e4"
+    "revision": "f2ca8edf18400c9582538297f6b0dec3"
   },
   {
     "url": "page-data/sq/d/2802107742.json",
-    "revision": "48ecce6937c534a2ac15d08b63b037a1"
+    "revision": "fdd56523f0cd83ce6cb3e8863fb08b1d"
   },
   {
     "url": "component---src-pages-research-tsx-2209d14037c4defe51c9.js"
   },
   {
     "url": "page-data/research/page-data.json",
-    "revision": "00182532dcdc4856141ac6227c8a9f67"
+    "revision": "495eb58dbe1d4caec07eac362b62a010"
   },
   {
     "url": "page-data/sq/d/4101461770.json",
-    "revision": "2cdbc1194c32999acf29a98b33dc2dcb"
+    "revision": "bb3fc7f2cd057370af8e10058747bad0"
   },
   {
     "url": "component---src-pages-contact-index-tsx-2ee41770cf722633b75a.js"
   },
   {
     "url": "page-data/contact/page-data.json",
-    "revision": "b0a30acc6652bca82a652c387bb3e66e"
+    "revision": "9fb6c410d8d3042f8412603997e5e732"
   },
   {
     "url": "component---src-pages-404-index-tsx-e92b3b90c1c22cb8d08a.js"
   },
   {
     "url": "page-data/404/page-data.json",
-    "revision": "cb50fe58fa0f2398443c24dbef0e45d3"
+    "revision": "20c92722039e3797412dc801173d6938"
   },
   {
     "url": "manifest.webmanifest",
